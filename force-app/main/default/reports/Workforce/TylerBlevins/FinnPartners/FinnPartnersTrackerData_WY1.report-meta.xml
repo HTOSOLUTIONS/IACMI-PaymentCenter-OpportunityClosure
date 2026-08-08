@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>Lead.pi__first_touch_url__c</field>
+    </columns>
+    <columns>
+        <field>Lead.pi__last_activity__c</field>
+    </columns>
+    <columns>
+        <field>Lead.pi__campaign__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Heard_about_IACMI__c</field>
+    </columns>
+    <columns>
+        <field>Lead.How_did_you_hear_about_METAL__c</field>
+    </columns>
+    <columns>
+        <field>Lead.How_did_you_hear_IACMI_Other__c</field>
+    </columns>
+    <description>Report for Finn Partners to better refine their Paid Ads</description>
+    <format>Tabular</format>
+    <name>FinnPartnersTrackerData</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2026-05-28</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-01-01</startDate>
+    </timeFrameFilter>
+</Report>

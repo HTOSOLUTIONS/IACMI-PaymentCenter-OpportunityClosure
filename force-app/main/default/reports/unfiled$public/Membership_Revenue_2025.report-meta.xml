@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>fw1__Invoice__c$fw1__Net_Amount__c</field>
+    </columns>
+    <description>Membership Revenue for 2025</description>
+    <filter>
+        <criteriaItems>
+            <column>fw1__Invoice__c$fw1__Is_Voided__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>fw1__Invoice__c$fw1__Account__c.Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Member</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>fw1__Invoice__c$fw1__Account__c.Type</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Membership Revenue 2025</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>fw1__All_Invoices__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>fw1__Invoice__c$fw1__Billing_Period_End__c</dateColumn>
+        <endDate>2025-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2025-12-31</startDate>
+    </timeFrameFilter>
+</Report>

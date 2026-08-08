@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Large Industry (&gt; 500 employees)</fullName>
+        <default>false</default>
+        <label>Large Industry (&gt; 500 employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Medium Industry (51-500 employees)</fullName>
+        <default>false</default>
+        <label>Medium Industry (51-500 employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Small/Medium Industry (11-50 employees)</fullName>
+        <default>false</default>
+        <label>Small/Medium Industry (11-50 employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Small Industry (1-10 employees)</fullName>
+        <default>false</default>
+        <label>Small Industry (1-10 employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Academic Partner</fullName>
+        <default>false</default>
+        <label>Academic Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Academic/Workforce Partner</fullName>
+        <default>false</default>
+        <label>Academic/Workforce Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Community College/Workforce Partner</fullName>
+        <default>false</default>
+        <label>Community College/Workforce Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Academic Institution</fullName>
+        <default>false</default>
+        <label>Academic Institution</label>
+    </customValue>
+    <customValue>
+        <fullName>Solo Consultant</fullName>
+        <default>false</default>
+        <label>Solo Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Entity</fullName>
+        <default>false</default>
+        <label>Other Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Sub Large Industry (&gt; 500 employees)</fullName>
+        <default>false</default>
+        <label>Sub Large Industry (&gt; 500 employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Large: 500+ employees</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Large: 500+ employees</label>
+    </customValue>
+    <customValue>
+        <fullName>Medium: 51-500 employees</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Medium: 51-500 employees</label>
+    </customValue>
+    <customValue>
+        <fullName>Small: 1-50 employees</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Small: 1-50 employees</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategic</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Strategic</label>
+    </customValue>
+    <customValue>
+        <fullName>Resource</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Resource</label>
+    </customValue>
+    <customValue>
+        <fullName>Not sure, would like to discuss</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not sure, would like to discuss</label>
+    </customValue>
+    <customValue>
+        <fullName>Not for Profit/Academic Institution</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not for Profit/Academic Institution</label>
+    </customValue>
+    <customValue>
+        <fullName>Large (&gt;500 Employees)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Large (&gt;500 Employees)</label>
+    </customValue>
+    <customValue>
+        <fullName>Small (&lt;500 Employees)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Small (&lt;500 Employees)</label>
+    </customValue>
+    <masterLabel>Membership Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

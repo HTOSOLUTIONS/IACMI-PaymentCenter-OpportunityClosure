@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Termination__c</fullName>
+    <inlineHelpText>Select the reason for termination</inlineHelpText>
+    <label>Reason for Termination</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Financial Difficulties</fullName>
+                <default>false</default>
+                <label>Financial Difficulties</label>
+            </value>
+            <value>
+                <fullName>Reorganization/Buy out</fullName>
+                <default>false</default>
+                <label>Reorganization/Buy out</label>
+            </value>
+            <value>
+                <fullName>Member Value Not Sufficient</fullName>
+                <default>false</default>
+                <label>Member Value Not Sufficient</label>
+            </value>
+            <value>
+                <fullName>Unknown/Other</fullName>
+                <default>false</default>
+                <label>Unknown/Other</label>
+            </value>
+            <value>
+                <fullName>Legacy contact left company/Turn over</fullName>
+                <default>false</default>
+                <label>Legacy contact left company/Turn over</label>
+            </value>
+            <value>
+                <fullName>Loss of funding/project</fullName>
+                <default>false</default>
+                <label>Loss of funding/project</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

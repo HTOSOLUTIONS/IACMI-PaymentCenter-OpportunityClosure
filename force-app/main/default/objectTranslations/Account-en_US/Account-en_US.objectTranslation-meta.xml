@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Account Filter Fields --></label>
+        <name>MC4SF__Account_Filter_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Additional Business Data Points --></label>
+            <section>Additional Business Data Points</section>
+        </sections>
+        <sections>
+            <label><!-- Membership Details --></label>
+            <section>Membership Details</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Membership Info --></label>
+        <name>Membership_Info</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions --></label>
+        <name>MC4SF__MailChimp_Subscriptions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Check --></label>
+        <name>dupcheck__dc3Check</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Merge --></label>
+        <name>dupcheck__dc3Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Advanced_Payment --></label>
+        <name>fw1__Advanced_Payment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Payment_Profile --></label>
+        <name>fw1__Create_Payment_Profile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate_Statement --></label>
+        <name>fw1__Generate_Statement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pay_Invoices --></label>
+        <name>fw1__Pay_Invoices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Bank_Authorization --></label>
+        <name>fw1__Request_Bank_Authorization</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rollup --></label>
+        <name>fw1__Rollup</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Statement --></label>
+        <name>fw1__Statement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_Prospect_Insight --></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

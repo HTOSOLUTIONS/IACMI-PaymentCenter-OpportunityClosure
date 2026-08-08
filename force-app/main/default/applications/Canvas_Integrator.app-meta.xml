@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#508ABE</headerColor>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Canvas Integration</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Canvas Integrator</label>
+    <navType>Standard</navType>
+    <tabs>Canvas_Settings__c</tabs>
+    <tabs>Canvas_User__c</tabs>
+    <tabs>Canvas_Course__c</tabs>
+    <tabs>Canvas_Enrollment_Batch__c</tabs>
+    <tabs>Canvas_Enrollment__c</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>Canvas_Course_Package__c</tabs>
+    <tabs>Workforce_Program__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Canvas_Integrator_UtilityBar</utilityBar>
+</CustomApplication>

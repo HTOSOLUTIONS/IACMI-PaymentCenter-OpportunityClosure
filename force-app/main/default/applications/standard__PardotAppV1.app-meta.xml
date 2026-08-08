@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>B2B Marketing Automation</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Pardot Lightning</label>
+    <navType>Standard</navType>
+    <tabs>standard-B2bHome</tabs>
+    <tabs>standard-B2bMarketablePeople</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-B2bAutomation</tabs>
+    <tabs>standard-B2bPardotEmail</tabs>
+    <tabs>standard-B2bContent</tabs>
+    <tabs>standard-B2bPardotReports</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-B2bPardotSettings</tabs>
+    <tabs>pi__ProspectInsight</tabs>
+    <tabs>standard-EmailTemplate</tabs>
+    <tabs>standard-EmailContent</tabs>
+    <tabs>Canvas_Enrollment__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

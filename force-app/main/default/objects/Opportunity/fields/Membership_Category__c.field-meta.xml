@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Category__c</fullName>
+    <label>Membership Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Large Industry with more than 500 employees</fullName>
+                <default>false</default>
+                <label>Large Industry with more than 500 employees</label>
+            </value>
+            <value>
+                <fullName>Medium Industry with 51 to 500 employees</fullName>
+                <default>false</default>
+                <label>Medium Industry with 51 to 500 employees</label>
+            </value>
+            <value>
+                <fullName>Small or Medium Industry with 11 to 50 employees</fullName>
+                <default>false</default>
+                <label>Small or Medium Industry with 11 to 50 employees</label>
+            </value>
+            <value>
+                <fullName>Small Industry with 1 to 10 employees</fullName>
+                <default>false</default>
+                <label>Small Industry with 1 to 10 employees</label>
+            </value>
+            <value>
+                <fullName>Academic Partner</fullName>
+                <default>false</default>
+                <label>Academic Partner</label>
+            </value>
+            <value>
+                <fullName>Community College Workforce Partner</fullName>
+                <default>false</default>
+                <label>Community College Workforce Partner</label>
+            </value>
+            <value>
+                <fullName>Solo Consultant</fullName>
+                <default>false</default>
+                <label>Solo Consultant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

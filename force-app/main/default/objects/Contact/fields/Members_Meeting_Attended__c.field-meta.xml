@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Members_Meeting_Attended__c</fullName>
+    <label>Members Meeting Attended</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Summer 2015</fullName>
+                <default>false</default>
+                <label>Summer 2015</label>
+            </value>
+            <value>
+                <fullName>Winter 2016</fullName>
+                <default>false</default>
+                <label>Winter 2016</label>
+            </value>
+            <value>
+                <fullName>Summer 2016</fullName>
+                <default>false</default>
+                <label>Summer 2016</label>
+            </value>
+            <value>
+                <fullName>Winter 2017</fullName>
+                <default>false</default>
+                <label>Winter 2017</label>
+            </value>
+            <value>
+                <fullName>Summer 2017</fullName>
+                <default>false</default>
+                <label>Summer 2017</label>
+            </value>
+            <value>
+                <fullName>Winter 2018</fullName>
+                <default>false</default>
+                <label>Winter 2018</label>
+            </value>
+            <value>
+                <fullName>Summer 2018</fullName>
+                <default>false</default>
+                <label>Summer 2018</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

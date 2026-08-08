@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workforce_Type__c</fullName>
+    <label>Workforce Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advanced Composites Career Pathways (ACCP)</fullName>
+                <default>false</default>
+                <label>Advanced Composites Career Pathways (ACCP)</label>
+            </value>
+            <value>
+                <fullName>America&apos;s Cutting Edge (ACE)</fullName>
+                <default>false</default>
+                <label>America&apos;s Cutting Edge (ACE)</label>
+            </value>
+            <value>
+                <fullName>Nextflex MEEP</fullName>
+                <default>false</default>
+                <label>Nextflex MEEP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

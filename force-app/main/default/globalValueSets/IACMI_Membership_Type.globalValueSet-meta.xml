@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Consortium</fullName>
+        <default>false</default>
+        <label>Consortium</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium</fullName>
+        <default>false</default>
+        <label>Premium</label>
+    </customValue>
+    <customValue>
+        <fullName>Resource</fullName>
+        <default>false</default>
+        <label>Resource</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategic</fullName>
+        <default>false</default>
+        <label>Strategic</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Community College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Charter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Charter</label>
+    </customValue>
+    <customValue>
+        <fullName>Associate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Associate</label>
+    </customValue>
+    <masterLabel>IACMI Membership Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACE_Composites_Online_Registrants</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Composites_Online_Signup_Form_Time__c</columns>
+    <columns>Composites_and_Finishing__c</columns>
+    <columns>Machine_Tool_Response_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>School_or_company_country__c</field>
+        <operation>equals</operation>
+        <value>United States,Canada,Australia,Germany,Mexico</value>
+    </filters>
+    <label>ACE Composites Online Registrants</label>
+</ListView>

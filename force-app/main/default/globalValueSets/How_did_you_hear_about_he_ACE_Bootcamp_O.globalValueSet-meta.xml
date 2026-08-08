@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>IACMI website</fullName>
+        <default>false</default>
+        <label>IACMI website</label>
+    </customValue>
+    <customValue>
+        <fullName>ACE Website</fullName>
+        <default>false</default>
+        <label>ACE Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Social media</fullName>
+        <default>false</default>
+        <label>Social media</label>
+    </customValue>
+    <customValue>
+        <fullName>Word of mouth</fullName>
+        <default>false</default>
+        <label>Word of mouth</label>
+    </customValue>
+    <customValue>
+        <fullName>Guidance counselor or school staff/teacher</fullName>
+        <default>false</default>
+        <label>Guidance counselor or school staff/teacher</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>How did you hear about he ACE Bootcamp O</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

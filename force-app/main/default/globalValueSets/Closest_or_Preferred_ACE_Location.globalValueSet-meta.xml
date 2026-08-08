@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>University Of Tennessee (Knoxville, TN)</fullName>
+        <default>false</default>
+        <label>University Of Tennessee (Knoxville, TN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pellissippi State Community College (Knoxville, TN)</fullName>
+        <default>false</default>
+        <label>Pellissippi State Community College (Knoxville, TN)</label>
+    </customValue>
+    <customValue>
+        <fullName>TCAT Knoxville</fullName>
+        <default>false</default>
+        <label>TCAT Knoxville</label>
+    </customValue>
+    <customValue>
+        <fullName>North Carolina A&amp;T (Greensboro, NC)</fullName>
+        <default>false</default>
+        <label>North Carolina A&amp;T (Greensboro, NC)</label>
+    </customValue>
+    <customValue>
+        <fullName>University of Florida (Gainesville, FL)</fullName>
+        <default>false</default>
+        <label>University of Florida (Gainesville, FL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Polk State College (Winter Haven, FL)</fullName>
+        <default>false</default>
+        <label>Polk State College (Winter Haven, FL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian River State College (Fort Pierce, FL)</fullName>
+        <default>false</default>
+        <label>Indian River State College (Fort Pierce, FL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Texas A&amp;M (Brazos County, TX)</fullName>
+        <default>false</default>
+        <label>Texas A&amp;M (Brazos County, TX)</label>
+    </customValue>
+    <customValue>
+        <fullName>Robert C. Byrd Institute At Marshall University (Huntington, WV)</fullName>
+        <default>false</default>
+        <label>Robert C. Byrd Institute At Marshall University (Huntington, WV)</label>
+    </customValue>
+    <customValue>
+        <fullName>Roane State Community College (Oak Ridge, TN)</fullName>
+        <default>false</default>
+        <label>Roane State Community College (Oak Ridge, TN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alamance Community College (Graham, NC)</fullName>
+        <default>false</default>
+        <label>Alamance Community College (Graham, NC)</label>
+    </customValue>
+    <customValue>
+        <fullName>University of North Texas (Denton, TX)</fullName>
+        <default>false</default>
+        <label>University of North Texas (Denton, TX)</label>
+    </customValue>
+    <masterLabel>Closest or Preferred ACE Location</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

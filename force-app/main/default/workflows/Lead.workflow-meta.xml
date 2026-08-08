@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_alert_for_DTC_ACCP_team</fullName>
+        <ccEmails>wes.hobbs@davistech.edu; eric.anderson@davistech.edu</ccEmails>
+        <description>Email alert for DTC ACCP team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jedminster+iacmi@streamlineba.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tblevins@iacmi.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workforce/ACCP_RFI_Interest</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Membership_Form_Completed_Notify_Jarod</fullName>
+        <description>New Membership Form Completed: Notify Jarod</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>hcastleberry@iacmi.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Membership_Form</template>
+    </alerts>
+    <rules>
+        <fullName>DTC ACCP General Inquiry notification</fullName>
+        <actions>
+            <name>Email_alert_for_DTC_ACCP_team</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Workfdorce_Type__c</field>
+            <operation>equals</operation>
+            <value>Advanced Composites Career Pathways (ACCP)</value>
+        </criteriaItems>
+        <description>Email alert for DTC ACCP team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Membership Form Completed</fullName>
+        <actions>
+            <name>New_Membership_Form_Completed_Notify_Jarod</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.pi__campaign__c</field>
+            <operation>equals</operation>
+            <value>Membership Form</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

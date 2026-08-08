@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_you_hear_about_METAL__c</fullName>
+    <label>How did you hear about METAL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>&quot;Make it in America&quot; Campaign</fullName>
+                <default>false</default>
+                <label>&quot;Make it in America&quot; Campaign</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Instagram</fullName>
+                <default>false</default>
+                <label>Instagram</label>
+            </value>
+            <value>
+                <fullName>Instructor/Professor</fullName>
+                <default>false</default>
+                <label>Instructor/Professor</label>
+            </value>
+            <value>
+                <fullName>LaborUp</fullName>
+                <default>false</default>
+                <label>LaborUp</label>
+            </value>
+            <value>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+                <label>LinkedIn</label>
+            </value>
+            <value>
+                <fullName>NextOp</fullName>
+                <default>false</default>
+                <label>NextOp</label>
+            </value>
+            <value>
+                <fullName>X (Twitter)</fullName>
+                <default>false</default>
+                <label>X (Twitter)</label>
+            </value>
+            <value>
+                <fullName>ACE or METAL Activity/Event</fullName>
+                <default>false</default>
+                <label>ACE or METAL Activity/Event</label>
+            </value>
+            <value>
+                <fullName>IACMI Partner Facility</fullName>
+                <default>false</default>
+                <label>IACMI Partner Facility</label>
+            </value>
+            <value>
+                <fullName>IACMI Staff</fullName>
+                <default>false</default>
+                <label>IACMI Staff</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>MEP (Manufacturing Extension Partnership)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MEP (Manufacturing Extension Partnership)</label>
+            </value>
+            <value>
+                <fullName>METAL Activity/Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>METAL Activity/Event</label>
+            </value>
+            <value>
+                <fullName>School/Activity Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>School/Activity Event</label>
+            </value>
+            <value>
+                <fullName>Television</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Television</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

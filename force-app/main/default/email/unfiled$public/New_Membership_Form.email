@@ -1,0 +1,9 @@
+Jarod, 
+
+A new membership form was completed. Below are the details: 
+
+Name: {!Lead.FirstName} {!Lead.LastName}
+Organization: {!Lead.Company}
+Email:  {!Lead.Email}
+
+Here is a link to the Salesforce record:  {!Lead.Link}

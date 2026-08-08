@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>WFD_Project_ACE_Email</letterhead>
+    <name>Hub/Spoke Reporting Reminder</name>
+    <style>freeForm</style>
+    <subject>{!Account.Name} Monthly Report</subject>
+    <textOnly>Greetings {!Contact.FirstName},
+
+
+This is a friendly reminder that your monthly report is due by the 10th. Also, please be to sure include any rosters from your competed bootcamps. It is imperative that we receive reports and rosters on time.
+
+
+
+Thank you,
+
+
+
+
+If you have already sent in your report, please ignore this email. If you have any questions or concerns, please reach out to Kim Harris at kharris@iacmi.org.
+
+IACMI - The Composites Institute
+
+2360 Cherahala Blvd.
+
+Knoxville, TN 37932</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

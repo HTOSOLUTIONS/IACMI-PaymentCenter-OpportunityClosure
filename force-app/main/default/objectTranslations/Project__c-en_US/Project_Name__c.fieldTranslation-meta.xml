@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is the name of the project?  This is not the project number, but a descriptive name. --></help>
+    <label><!-- Project Name --></label>
+    <name>Project_Name__c</name>
+</CustomFieldTranslation>

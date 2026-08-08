@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affiliate_Program__c</fullName>
+    <label>Affiliate Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Marshall Advanced Manufacturing Center</fullName>
+                <default>false</default>
+                <label>Marshall Advanced Manufacturing Center</label>
+            </value>
+            <value>
+                <fullName>New Jersey Manufacturing Extension Program</fullName>
+                <default>false</default>
+                <label>New Jersey Manufacturing Extension Program</label>
+            </value>
+            <value>
+                <fullName>North Carolina A&amp;T</fullName>
+                <default>false</default>
+                <label>North Carolina A&amp;T</label>
+            </value>
+            <value>
+                <fullName>St. Cloud State University</fullName>
+                <default>false</default>
+                <label>St. Cloud State University</label>
+            </value>
+            <value>
+                <fullName>Texas A&amp;M</fullName>
+                <default>false</default>
+                <label>Texas A&amp;M</label>
+            </value>
+            <value>
+                <fullName>University of Florida</fullName>
+                <default>false</default>
+                <label>University of Florida</label>
+            </value>
+            <value>
+                <fullName>University of St. Thomas</fullName>
+                <default>false</default>
+                <label>University of St. Thomas</label>
+            </value>
+            <value>
+                <fullName>University of Tennessee</fullName>
+                <default>false</default>
+                <label>University of Tennessee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

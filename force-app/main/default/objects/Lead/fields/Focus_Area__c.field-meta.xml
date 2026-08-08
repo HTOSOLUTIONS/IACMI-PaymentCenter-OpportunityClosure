@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_Area__c</fullName>
+    <label>Focus Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Compressed Gas Storage</fullName>
+                <default>false</default>
+                <label>Compressed Gas Storage</label>
+            </value>
+            <value>
+                <fullName>Design Modeling and Simulation</fullName>
+                <default>false</default>
+                <label>Design Modeling and Simulation</label>
+            </value>
+            <value>
+                <fullName>High Rate Aerostructures</fullName>
+                <default>false</default>
+                <label>High Rate Aerostructures</label>
+            </value>
+            <value>
+                <fullName>Infrastructure &amp; Construction</fullName>
+                <default>false</default>
+                <label>Infrastructure &amp; Construction</label>
+            </value>
+            <value>
+                <fullName>Materials and Processes</fullName>
+                <default>false</default>
+                <label>Materials and Processes</label>
+            </value>
+            <value>
+                <fullName>Recycling/Circular Economy</fullName>
+                <default>false</default>
+                <label>Recycling/Circular Economy</label>
+            </value>
+            <value>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+                <label>Vehicles</label>
+            </value>
+            <value>
+                <fullName>Wind Turbines</fullName>
+                <default>false</default>
+                <label>Wind Turbines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

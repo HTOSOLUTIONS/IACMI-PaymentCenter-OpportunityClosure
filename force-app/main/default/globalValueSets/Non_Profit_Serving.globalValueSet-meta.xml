@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Youth</fullName>
+        <default>false</default>
+        <label>Youth</label>
+    </customValue>
+    <customValue>
+        <fullName>Veteran</fullName>
+        <default>false</default>
+        <label>Veteran</label>
+    </customValue>
+    <customValue>
+        <fullName>Women</fullName>
+        <default>false</default>
+        <label>Women</label>
+    </customValue>
+    <customValue>
+        <fullName>Disadvantaged Adults</fullName>
+        <default>false</default>
+        <label>Disadvantaged Adults</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Active Duty Military</fullName>
+        <default>false</default>
+        <label>Active Duty Military</label>
+    </customValue>
+    <customValue>
+        <fullName>Disadvantaged Youth</fullName>
+        <default>false</default>
+        <label>Disadvantaged Youth</label>
+    </customValue>
+    <customValue>
+        <fullName>People with Disabilities</fullName>
+        <default>false</default>
+        <label>People with Disabilities</label>
+    </customValue>
+    <masterLabel>Non-Profit Serving</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

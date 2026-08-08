@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Previously done business with the government,</fullName>
+        <default>false</default>
+        <label>Previously done business with the government,</label>
+    </customValue>
+    <customValue>
+        <fullName>Currently doing business with the government.</fullName>
+        <default>false</default>
+        <label>Currently doing business with the government.</label>
+    </customValue>
+    <customValue>
+        <fullName>Planning on doing to do business with the government in the future.</fullName>
+        <default>false</default>
+        <label>Planning on doing to do business with the government in the future.</label>
+    </customValue>
+    <masterLabel>Government Contracts</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

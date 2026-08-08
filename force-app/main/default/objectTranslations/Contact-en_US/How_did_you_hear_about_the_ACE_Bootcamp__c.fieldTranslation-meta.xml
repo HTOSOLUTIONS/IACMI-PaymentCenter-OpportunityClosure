@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- How did you hear about the ACE Bootcamp --></label>
+    <name>How_did_you_hear_about_the_ACE_Bootcamp__c</name>
+</CustomFieldTranslation>

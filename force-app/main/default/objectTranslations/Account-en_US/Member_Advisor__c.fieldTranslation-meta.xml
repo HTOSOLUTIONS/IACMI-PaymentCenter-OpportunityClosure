@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Member Advisor --></label>
+    <name>Member_Advisor__c</name>
+    <picklistValues>
+        <masterLabel>Brian Rice</masterLabel>
+        <translation><!-- Brian Rice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dale Brosius</masterLabel>
+        <translation><!-- Dale Brosius --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>David Okonski</masterLabel>
+        <translation><!-- David Okonski --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>David Snowberg</masterLabel>
+        <translation><!-- David Snowberg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Greg Harrell</masterLabel>
+        <translation><!-- Greg Harrell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jason Gibson</masterLabel>
+        <translation><!-- Jason Gibson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joe Fox</masterLabel>
+        <translation><!-- Joe Fox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kim Hoodin</masterLabel>
+        <translation><!-- Kim Hoodin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mike Kubacki</masterLabel>
+        <translation><!-- Mike Kubacki --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ray Boeman</masterLabel>
+        <translation><!-- Ray Boeman --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sierra Noe</masterLabel>
+        <translation><!-- Sierra Noe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uday Vaidya</masterLabel>
+        <translation><!-- Uday Vaidya --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastimil Kunc</masterLabel>
+        <translation><!-- Vlastimil Kunc --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

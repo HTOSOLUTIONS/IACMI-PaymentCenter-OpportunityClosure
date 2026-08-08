@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Special IACMI 2021 Membership Renewal Update</name>
+    <pageDevName>Special_IACMI_2021_Membership_Renewal_Update</pageDevName>
+    <style>none</style>
+    <subject>Special IACMI 2021 Membership Renewal Update</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

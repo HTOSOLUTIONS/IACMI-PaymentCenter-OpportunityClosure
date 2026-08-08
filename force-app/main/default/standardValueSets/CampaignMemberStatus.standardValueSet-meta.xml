@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bounced</fullName>
+        <default>false</default>
+        <label>Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CMMC 1.0 Course Package</fullName>
+        <default>false</default>
+        <label>CMMC 1.0 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composites Unit 1 Course Package</fullName>
+        <default>false</default>
+        <label>Composites Unit 1 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composites Unit 2 Course Package</fullName>
+        <default>false</default>
+        <label>Composites Unit 2 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composites Unit 3 Course Package</fullName>
+        <default>false</default>
+        <label>Composites Unit 3 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composites Unit 4 Course Package</fullName>
+        <default>false</default>
+        <label>Composites Unit 4 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composites Unit 5 Course Package</fullName>
+        <default>false</default>
+        <label>Composites Unit 5 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Connected</fullName>
+        <default>false</default>
+        <label>Connected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Course Package 1</fullName>
+        <default>false</default>
+        <label>Course Package 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fusion 360 Course Package</fullName>
+        <default>false</default>
+        <label>Fusion 360 Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intro to Composites Course Package</fullName>
+        <default>false</default>
+        <label>Intro to Composites Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>List</fullName>
+        <default>false</default>
+        <label>List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mastercam Course Package</fullName>
+        <default>false</default>
+        <label>Mastercam Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Member</fullName>
+        <default>false</default>
+        <label>Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>METAL | Digital Tech Course Package</fullName>
+        <default>false</default>
+        <label>METAL | Digital Tech Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>METAL | Forging Course Package</fullName>
+        <default>false</default>
+        <label>METAL | Forging Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>METAL | Magnesium Casting Course Package</fullName>
+        <default>false</default>
+        <label>METAL | Magnesium Casting Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>METAL | Sand Science Course Package</fullName>
+        <default>false</default>
+        <label>METAL | Sand Science Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>METAL Course Package</fullName>
+        <default>false</default>
+        <label>METAL Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Metrology Course Package</fullName>
+        <default>false</default>
+        <label>Metrology Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <label>No Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Attended</fullName>
+        <default>false</default>
+        <label>Not Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened email</fullName>
+        <default>false</default>
+        <label>Opened email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opted-in</fullName>
+        <default>false</default>
+        <label>Opted-in</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Project Member</fullName>
+        <default>false</default>
+        <label>Project Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered for online</fullName>
+        <default>false</default>
+        <label>Registered for online</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RTegistered for online Mastercam course</fullName>
+        <default>false</default>
+        <label>RTegistered for online Mastercam course</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Smart Manufacturing Course Package</fullName>
+        <default>false</default>
+        <label>Smart Manufacturing Course Package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted Form</fullName>
+        <default>false</default>
+        <label>Submitted Form</label>
+    </standardValue>
+</StandardValueSet>

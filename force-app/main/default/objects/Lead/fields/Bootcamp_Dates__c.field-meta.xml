@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bootcamp_Dates__c</fullName>
+    <description>Used in pardot list &quot;Machine Tool Bootcamp Signup Forms&quot;</description>
+    <externalId>false</externalId>
+    <label>Bootcamp Dates</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

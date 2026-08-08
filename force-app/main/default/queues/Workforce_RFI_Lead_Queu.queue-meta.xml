@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Workforce ACCP RFI Lead Queue</name>
+    <queueMembers>
+        <users>
+            <user>eking@iacmi.org</user>
+            <user>jharmon@iacmi.org</user>
+            <user>m+iacmi@streamlineba.com</user>
+            <user>tblevins@iacmi.org</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

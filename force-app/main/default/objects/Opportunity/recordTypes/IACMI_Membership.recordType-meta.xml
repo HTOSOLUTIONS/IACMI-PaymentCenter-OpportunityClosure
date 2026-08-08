@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IACMI_Membership</fullName>
+    <active>true</active>
+    <businessProcess>IACMI Membership</businessProcess>
+    <label>IACMI Membership</label>
+    <picklistValues>
+        <picklist>Affiliate_Program__c</picklist>
+        <values>
+            <fullName>Marshall Advanced Manufacturing Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey Manufacturing Extension Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina A%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>St%2E Cloud State University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas A%26M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of St%2E Thomas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Tennessee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Foreign_Ownership_50__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hub_Spoke__c</picklist>
+        <values>
+            <fullName>Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MailChimp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oct 2017 List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Membership_Category__c</picklist>
+        <values>
+            <fullName>Academic Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community College Workforce Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large Industry with more than 500 employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium Industry with 51 to 500 employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Industry with 1 to 10 employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small or Medium Industry with 11 to 50 employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solo Consultant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Membership_Type__c</picklist>
+        <values>
+            <fullName>Consortium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>fw1__DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

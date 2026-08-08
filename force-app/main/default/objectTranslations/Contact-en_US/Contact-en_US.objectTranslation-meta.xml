@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Contact Filter Fields --></label>
+        <name>MC4SF__Contact_Filter_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- ACE Bootcamp Information --></label>
+            <section>ACE Bootcamp Information</section>
+        </sections>
+        <sections>
+            <label><!-- Pardot --></label>
+            <section>Pardot</section>
+        </sections>
+        <sections>
+            <label><!-- Pardot Lists --></label>
+            <section>Pardot Lists</section>
+        </sections>
+        <sections>
+            <label><!-- Role and Opportunity --></label>
+            <section>Role and Opportunity</section>
+        </sections>
+        <sections>
+            <label><!-- Workforce Information --></label>
+            <section>Workforce Information</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_detail --></label>
+        <name>MC4SF__MailChimp_Subscriptions_detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_list --></label>
+        <name>MC4SF__MailChimp_Subscriptions_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Check --></label>
+        <name>dupcheck__dc3Check</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- dc3Merge --></label>
+        <name>dupcheck__dc3Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Advanced_Payment --></label>
+        <name>fw1__Advanced_Payment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Connect_Stripe_Account --></label>
+        <name>fw1__Connect_Stripe_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Payment_Profile --></label>
+        <name>fw1__Create_Payment_Profile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Disconnect_Stripe_Account --></label>
+        <name>fw1__Disconnect_Stripe_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

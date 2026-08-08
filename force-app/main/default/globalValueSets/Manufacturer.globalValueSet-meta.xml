@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Composites Related Manufacturer</fullName>
+        <default>false</default>
+        <label>Composites Related Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>DoD Related</fullName>
+        <default>false</default>
+        <label>DoD Related</label>
+    </customValue>
+    <customValue>
+        <fullName>DoE Related</fullName>
+        <default>false</default>
+        <label>DoE Related</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Women Owned</fullName>
+        <default>false</default>
+        <label>Women Owned</label>
+    </customValue>
+    <customValue>
+        <fullName>Veteran Owned</fullName>
+        <default>false</default>
+        <label>Veteran Owned</label>
+    </customValue>
+    <customValue>
+        <fullName>Minority Owned</fullName>
+        <default>false</default>
+        <label>Minority Owned</label>
+    </customValue>
+    <customValue>
+        <fullName>Disadvantaged Business</fullName>
+        <default>false</default>
+        <label>Disadvantaged Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Number of Employees</fullName>
+        <default>false</default>
+        <label>Number of Employees</label>
+    </customValue>
+    <customValue>
+        <fullName>8a Certified</fullName>
+        <default>false</default>
+        <label>8a Certified</label>
+    </customValue>
+    <masterLabel>Manufacturer</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

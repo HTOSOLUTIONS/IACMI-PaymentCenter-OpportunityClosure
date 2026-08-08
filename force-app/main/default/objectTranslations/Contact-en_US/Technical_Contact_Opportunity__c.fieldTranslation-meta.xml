@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Technical Contact Opportunity --></label>
+    <name>Technical_Contact_Opportunity__c</name>
+    <relationshipLabel><!-- Contacts (Technical Contact Opportunity) --></relationshipLabel>
+</CustomFieldTranslation>

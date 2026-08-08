@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Membership RFI Lead Queue</name>
+    <queueMembers>
+        <users>
+            <user>eking@iacmi.org</user>
+            <user>hjay@iacmi.org</user>
+            <user>m+iacmi@streamlineba.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

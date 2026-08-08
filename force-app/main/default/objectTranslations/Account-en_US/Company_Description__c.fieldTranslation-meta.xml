@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This comes from the membership form in Pardot --></help>
+    <label><!-- Company Description --></label>
+    <name>Company_Description__c</name>
+</CustomFieldTranslation>

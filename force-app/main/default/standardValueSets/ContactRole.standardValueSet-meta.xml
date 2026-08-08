@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Accounting/Budget Point of Contact</fullName>
+        <default>false</default>
+        <label>Accounting/Budget Point of Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ACE Machine Tool Instructor</fullName>
+        <default>false</default>
+        <label>ACE Machine Tool Instructor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing Point of Contact</fullName>
+        <default>false</default>
+        <label>Billing Point of Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Point of Contact</fullName>
+        <default>false</default>
+        <label>Business Point of Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Communications/PR</fullName>
+        <default>false</default>
+        <label>Communications/PR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NAC Representative</fullName>
+        <default>false</default>
+        <label>NAC Representative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Observer</fullName>
+        <default>false</default>
+        <label>Observer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primary Point of Contact</fullName>
+        <default>true</default>
+        <label>Primary Point of Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Point of Contact</fullName>
+        <default>false</default>
+        <label>Technical Point of Contact</label>
+    </standardValue>
+</StandardValueSet>

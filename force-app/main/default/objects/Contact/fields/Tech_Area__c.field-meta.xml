@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Area__c</fullName>
+    <description>Technical area of interest for a contact.</description>
+    <label>Tech Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+                <label>Vehicles</label>
+            </value>
+            <value>
+                <fullName>Wind</fullName>
+                <default>false</default>
+                <label>Wind</label>
+            </value>
+            <value>
+                <fullName>Compressed Gas Storage</fullName>
+                <default>false</default>
+                <label>Compressed Gas Storage</label>
+            </value>
+            <value>
+                <fullName>Materials</fullName>
+                <default>false</default>
+                <label>Materials</label>
+            </value>
+            <value>
+                <fullName>Design Modeling and Simulation</fullName>
+                <default>false</default>
+                <label>Design Modeling and Simulation</label>
+            </value>
+            <value>
+                <fullName>Marine</fullName>
+                <default>false</default>
+                <label>Marine</label>
+            </value>
+            <value>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+                <label>Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Aerospace</fullName>
+                <default>false</default>
+                <label>Aerospace</label>
+            </value>
+            <value>
+                <fullName>Recycling</fullName>
+                <default>false</default>
+                <label>Recycling</label>
+            </value>
+            <value>
+                <fullName>Consumer Products</fullName>
+                <default>false</default>
+                <label>Consumer Products</label>
+            </value>
+            <value>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+                <label>Recreation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

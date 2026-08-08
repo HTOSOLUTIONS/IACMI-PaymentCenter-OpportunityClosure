@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>fw1__Invoice__c.fw1__Net_Amount__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Account.Membership_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Premium</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_ACC_TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account.Organization_Size__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Large Industry (&gt; 500 employees),Medium Industry (51-500 employees),Small/Medium Industry (11-50 employees),Small Industry (1-10 employees),Academic Partner,Academic/Workforce Partner,Community College/Workforce Partner,Solo Consultant</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Account.Organization_Size__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2026 Membership Revenue by Tier</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$fw1__Invoice__c@fw1__Invoice__c.fw1__Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>fw1__Invoice__c.fw1__Billing_Period_End__c</dateColumn>
+        <endDate>2026-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2026-12-31</startDate>
+    </timeFrameFilter>
+</Report>

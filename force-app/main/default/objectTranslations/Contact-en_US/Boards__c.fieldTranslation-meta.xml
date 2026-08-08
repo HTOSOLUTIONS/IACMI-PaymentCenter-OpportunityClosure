@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Boards --></label>
+    <name>Boards__c</name>
+    <picklistValues>
+        <masterLabel>BOD</masterLabel>
+        <translation><!-- BOD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federal Advisor</masterLabel>
+        <translation><!-- Federal Advisor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAB</masterLabel>
+        <translation><!-- TAB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WAB</masterLabel>
+        <translation><!-- WAB --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

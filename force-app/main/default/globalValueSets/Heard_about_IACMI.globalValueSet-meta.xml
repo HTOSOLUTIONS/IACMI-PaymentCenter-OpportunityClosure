@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>&quot;Make it in America&quot; Campaign</fullName>
+        <default>false</default>
+        <label>&quot;Make it in America&quot; Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook</fullName>
+        <default>false</default>
+        <label>Facebook</label>
+    </customValue>
+    <customValue>
+        <fullName>Google</fullName>
+        <default>false</default>
+        <label>Google</label>
+    </customValue>
+    <customValue>
+        <fullName>Instagram</fullName>
+        <default>false</default>
+        <label>Instagram</label>
+    </customValue>
+    <customValue>
+        <fullName>Instructor/Professor</fullName>
+        <default>false</default>
+        <label>Instructor/Professor</label>
+    </customValue>
+    <customValue>
+        <fullName>LaborUp</fullName>
+        <default>false</default>
+        <label>LaborUp</label>
+    </customValue>
+    <customValue>
+        <fullName>LinkedIn</fullName>
+        <default>false</default>
+        <label>LinkedIn</label>
+    </customValue>
+    <customValue>
+        <fullName>NextOp</fullName>
+        <default>false</default>
+        <label>NextOp</label>
+    </customValue>
+    <customValue>
+        <fullName>X (Twitter)</fullName>
+        <default>false</default>
+        <label>X (Twitter)</label>
+    </customValue>
+    <customValue>
+        <fullName>ACE or METAL Activity/Event</fullName>
+        <default>false</default>
+        <label>ACE or METAL Activity/Event</label>
+    </customValue>
+    <customValue>
+        <fullName>IACMI Partner Facility</fullName>
+        <default>false</default>
+        <label>IACMI Partner Facility</label>
+    </customValue>
+    <customValue>
+        <fullName>IACMI Staff</fullName>
+        <default>false</default>
+        <label>IACMI Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Manufacturing Extension</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MEP (Manufacturing Extension Partnership)</label>
+    </customValue>
+    <customValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Event</label>
+    </customValue>
+    <customValue>
+        <fullName>instructor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>instructor</label>
+    </customValue>
+    <customValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media</label>
+    </customValue>
+    <description>Links to ACE Signup Pages in Pardot</description>
+    <masterLabel>Heard about IACMI</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

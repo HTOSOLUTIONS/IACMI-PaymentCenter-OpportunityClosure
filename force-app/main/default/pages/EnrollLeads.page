@@ -1,0 +1,44 @@
+<apex:page standardController="Lead" extensions="EnrollLeadsCustomController" recordSetVar="leads" action="{!setupPage}" lightningStylesheets="true" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Enroll Leads in a Canvas Course</h1>
+
+  <apex:form >
+    <apex:pageBlock rendered="{!UserHasToken}">
+
+        <apex:commandButton action="{!enrollSelected}" value="Enroll" rerender="requestsToEnroll"/>
+        <h2>Select a Course</h2>
+        <apex:selectList size="1" value="{!selectedCourse}">
+            <apex:selectOptions value="{!canvascourses}"/>
+        </apex:selectList>
+
+    </apex:pageBlock>
+
+    <apex:pageBlock rendered="{!IF(UserHasToken,false,true)}">
+        <p>
+            You will need to Authenticate with Canvas before you can enroll leads from Salesforce.  Click the Authenticate
+            button then return to the page to select Leads.
+        </p>
+	    <apex:commandButton action="{!authenticateCanvas}" value="Authenticate"/>
+    </apex:pageBlock>
+
+  </apex:form>
+
+  <!-- End Default Content REMOVE THIS -->
+  <apex:pageBlock rendered="{!UserHasToken}">
+	<h2>Selected Leads</h2>
+    <apex:pageBlockTable value="{!enrollmentRequests}" var="requeststable" id="requestsToEnroll" title="Leads to be Enrolled">
+        <apex:column >
+            <apex:facet name="header">Lead</apex:facet>
+            <apex:outputLink value="/{!requeststable.LeadEnrolled.Id}">{!requeststable.LeadEnrolled.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column value="{!requeststable.LeadEnrolled.Email}" headerValue="Email"/>
+        <apex:column >
+            <apex:facet name="header">Enrollment</apex:facet>
+            <apex:outputLink value="/{!requeststable.Canvas_Enrollment.Id}">{!requeststable.Canvas_Enrollment.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column value="{!requeststable.Message}" headerValue="Message"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+    
+
+</apex:page>

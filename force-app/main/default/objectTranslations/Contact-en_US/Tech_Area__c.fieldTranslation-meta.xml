@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tech Area --></label>
+    <name>Tech_Area__c</name>
+    <picklistValues>
+        <masterLabel>Aerospace</masterLabel>
+        <translation><!-- Aerospace --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Compressed Gas Storage</masterLabel>
+        <translation><!-- Compressed Gas Storage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consumer Products</masterLabel>
+        <translation><!-- Consumer Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Modeling and Simulation</masterLabel>
+        <translation><!-- Design Modeling and Simulation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Infrastructure</masterLabel>
+        <translation><!-- Infrastructure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marine</masterLabel>
+        <translation><!-- Marine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Materials</masterLabel>
+        <translation><!-- Materials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recreation</masterLabel>
+        <translation><!-- Recreation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recycling</masterLabel>
+        <translation><!-- Recycling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicles</masterLabel>
+        <translation><!-- Vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wind</masterLabel>
+        <translation><!-- Wind --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

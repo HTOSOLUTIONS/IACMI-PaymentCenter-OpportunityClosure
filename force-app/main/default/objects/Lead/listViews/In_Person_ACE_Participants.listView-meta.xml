@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Person_ACE_Participants</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Closest_or_Preferred_ACE_Location__c</columns>
+    <columns>Program_Role__c</columns>
+    <columns>Mailing_State__c</columns>
+    <columns>Current_Educational_Status__c</columns>
+    <columns>Current_Employment_Status__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Machine Tool Bootcamp Interest</label>
+</ListView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Business Contact</fullName>
+        <default>false</default>
+        <label>Business Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Contact</fullName>
+        <default>false</default>
+        <label>Technical Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Not currently in school</fullName>
+        <default>false</default>
+        <label>Not currently in school</label>
+    </customValue>
+    <customValue>
+        <fullName>Community college (two-year)</fullName>
+        <default>false</default>
+        <label>Community college (two-year)</label>
+    </customValue>
+    <customValue>
+        <fullName>High school</fullName>
+        <default>false</default>
+        <label>High school</label>
+    </customValue>
+    <customValue>
+        <fullName>University (four-year)</fullName>
+        <default>false</default>
+        <label>University (four-year)</label>
+    </customValue>
+    <description>This is a Pardot field too.</description>
+    <masterLabel>Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

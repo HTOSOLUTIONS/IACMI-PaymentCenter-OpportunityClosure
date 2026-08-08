@@ -1,0 +1,22 @@
+<apex:page standardController="Lead" extensions="CanvasOAuthConfirmationController" action="{!processToken}" lightningStylesheets="true" >
+
+    <apex:pageBlock >
+
+        <h1>Canvas Authorization Confirmation</h1>
+
+        <apex:pageBlockSection rendered="{!SuccessFullAuthorized}">
+            <p>
+                You have successfully authorized API Access with Canvas.  Return to the Leads list to select leads for enrollment in Canvas.
+            </p>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!IF(SuccessFullAuthorized,false,true)}">
+            <p>
+                There was a problem authorizing API Access with Canvas.  Please consult with your Administrator.
+            </p>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+    
+    
+</apex:page>

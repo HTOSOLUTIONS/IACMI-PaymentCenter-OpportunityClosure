@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_you_hear_about_the_ACE_Bootcamp__c</fullName>
+    <label>How did you hear about the ACE Bootcamp</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>How_did_you_hear_about_he_ACE_Bootcamp_O</valueSetName>
+    </valueSet>
+</CustomField>

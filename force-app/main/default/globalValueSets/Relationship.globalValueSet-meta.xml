@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Grant Provider</fullName>
+        <default>false</default>
+        <label>Grant Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor</fullName>
+        <default>false</default>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Sub-Awardee/Partner (could be multiple)</fullName>
+        <default>false</default>
+        <label>Sub-Awardee/Partner (could be multiple)</label>
+    </customValue>
+    <customValue>
+        <fullName>ACENet</fullName>
+        <default>false</default>
+        <label>ACENet</label>
+    </customValue>
+    <customValue>
+        <fullName>MEEP Skill Crafters/ Skill Crafters Express</fullName>
+        <default>false</default>
+        <label>MEEP Skill Crafters/ Skill Crafters Express</label>
+    </customValue>
+    <customValue>
+        <fullName>SEAMTN</fullName>
+        <default>false</default>
+        <label>SEAMTN</label>
+    </customValue>
+    <customValue>
+        <fullName>Add various grants funded/supported by IACMI</fullName>
+        <default>false</default>
+        <label>Add various grants funded/supported by IACMI</label>
+    </customValue>
+    <customValue>
+        <fullName>Supporter</fullName>
+        <default>false</default>
+        <label>Supporter</label>
+    </customValue>
+    <customValue>
+        <fullName>Member of IACMI</fullName>
+        <default>false</default>
+        <label>Member of IACMI</label>
+    </customValue>
+    <customValue>
+        <fullName>Association i.e. ACMA, SAMPE</fullName>
+        <default>false</default>
+        <label>Association i.e. ACMA, SAMPE</label>
+    </customValue>
+    <customValue>
+        <fullName>MEEP ACCP</fullName>
+        <default>false</default>
+        <label>MEEP ACCP</label>
+    </customValue>
+    <customValue>
+        <fullName>CORE-CM Southern App</fullName>
+        <default>false</default>
+        <label>CORE-CM Southern App</label>
+    </customValue>
+    <customValue>
+        <fullName>CORE-CM Utah</fullName>
+        <default>false</default>
+        <label>CORE-CM Utah</label>
+    </customValue>
+    <masterLabel>Relationship</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

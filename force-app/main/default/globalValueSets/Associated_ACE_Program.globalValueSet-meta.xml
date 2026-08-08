@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ACE Minnesota Mobile Trainer</fullName>
+        <default>false</default>
+        <label>ACE Minnesota Mobile Trainer</label>
+    </customValue>
+    <customValue>
+        <fullName>Alamance Community College</fullName>
+        <default>false</default>
+        <label>Alamance Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Alexandria Technical &amp; Community College</fullName>
+        <default>false</default>
+        <label>Alexandria Technical &amp; Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Anoka Technical College</fullName>
+        <default>false</default>
+        <label>Anoka Technical College</label>
+    </customValue>
+    <customValue>
+        <fullName>Appalachian Ohio Manufacturing Coalition</fullName>
+        <default>false</default>
+        <label>Appalachian Ohio Manufacturing Coalition</label>
+    </customValue>
+    <customValue>
+        <fullName>Ben Barber Innovation Academy</fullName>
+        <default>false</default>
+        <label>Ben Barber Innovation Academy</label>
+    </customValue>
+    <customValue>
+        <fullName>Calhoun Community College</fullName>
+        <default>false</default>
+        <label>Calhoun Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Cape Fear Community College</fullName>
+        <default>false</default>
+        <label>Cape Fear Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Champions Machine Tool</fullName>
+        <default>false</default>
+        <label>Champions Machine Tool</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleveland State University</fullName>
+        <default>false</default>
+        <label>Cleveland State University</label>
+    </customValue>
+    <customValue>
+        <fullName>CoorsTek Academy</fullName>
+        <default>false</default>
+        <label>CoorsTek Academy</label>
+    </customValue>
+    <customValue>
+        <fullName>Elizabethtown Community &amp; Technical College</fullName>
+        <default>false</default>
+        <label>Elizabethtown Community &amp; Technical College</label>
+    </customValue>
+    <customValue>
+        <fullName>Ferris State University</fullName>
+        <default>false</default>
+        <label>Ferris State University</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian River State College</fullName>
+        <default>false</default>
+        <label>Indian River State College</label>
+    </customValue>
+    <customValue>
+        <fullName>Lamar University</fullName>
+        <default>false</default>
+        <label>Lamar University</label>
+    </customValue>
+    <customValue>
+        <fullName>Marshall Advanced Manufacturing Center</fullName>
+        <default>false</default>
+        <label>Marshall Advanced Manufacturing Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Mississippi Gulf Coast Community College</fullName>
+        <default>false</default>
+        <label>Mississippi Gulf Coast Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Mississippi State University</fullName>
+        <default>false</default>
+        <label>Mississippi State University</label>
+    </customValue>
+    <customValue>
+        <fullName>Mountwest Community &amp; Technical College</fullName>
+        <default>false</default>
+        <label>Mountwest Community &amp; Technical College</label>
+    </customValue>
+    <customValue>
+        <fullName>None of these are close to me</fullName>
+        <default>true</default>
+        <label>None of these are close to me</label>
+    </customValue>
+    <customValue>
+        <fullName>North Carolina A&amp;T</fullName>
+        <default>false</default>
+        <label>North Carolina A&amp;T</label>
+    </customValue>
+    <customValue>
+        <fullName>Northeast Mississippi Community College</fullName>
+        <default>false</default>
+        <label>Northeast Mississippi Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Michigan University</fullName>
+        <default>false</default>
+        <label>Northern Michigan University</label>
+    </customValue>
+    <customValue>
+        <fullName>Northland Community and Technical College</fullName>
+        <default>false</default>
+        <label>Northland Community and Technical College</label>
+    </customValue>
+    <customValue>
+        <fullName>Pellissippi State Community College</fullName>
+        <default>false</default>
+        <label>Pellissippi State Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Penn State University - Erie (Behrend)</fullName>
+        <default>false</default>
+        <label>Penn State University - Erie (Behrend)</label>
+    </customValue>
+    <customValue>
+        <fullName>Polk State</fullName>
+        <default>false</default>
+        <label>Polk State</label>
+    </customValue>
+    <customValue>
+        <fullName>Raritan Valley Community College</fullName>
+        <default>false</default>
+        <label>Raritan Valley Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Red Rocks Community College</fullName>
+        <default>false</default>
+        <label>Red Rocks Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Roane State Community College</fullName>
+        <default>false</default>
+        <label>Roane State Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>St. Cloud State University</fullName>
+        <default>false</default>
+        <label>St. Cloud State University</label>
+    </customValue>
+    <customValue>
+        <fullName>St. Thomas University</fullName>
+        <default>false</default>
+        <label>St. Thomas University</label>
+    </customValue>
+    <customValue>
+        <fullName>Swiss Hills Career Center</fullName>
+        <default>false</default>
+        <label>Swiss Hills Career Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Tennessee College of Applied Technologies - Harriman</fullName>
+        <default>false</default>
+        <label>Tennessee College of Applied Technologies - Harriman</label>
+    </customValue>
+    <customValue>
+        <fullName>Tennessee College of Applied Technologies - Knoxville</fullName>
+        <default>false</default>
+        <label>Tennessee College of Applied Technologies - Knoxville</label>
+    </customValue>
+    <customValue>
+        <fullName>Texas A&amp;M</fullName>
+        <default>false</default>
+        <label>Texas A&amp;M</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Fort Bend (West Houston)</fullName>
+        <default>false</default>
+        <label>TSTC - Fort Bend (West Houston)</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Harligen (South Texas)</fullName>
+        <default>false</default>
+        <label>TSTC - Harligen (South Texas)</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Hutto (North Austin)</fullName>
+        <default>false</default>
+        <label>TSTC - Hutto (North Austin)</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Marshall (East Texas)</fullName>
+        <default>false</default>
+        <label>TSTC - Marshall (East Texas)</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Red Oak (South Dallas)</fullName>
+        <default>false</default>
+        <label>TSTC - Red Oak (South Dallas)</label>
+    </customValue>
+    <customValue>
+        <fullName>TSTC - Waco (Central Texas)</fullName>
+        <default>false</default>
+        <label>TSTC - Waco (Central Texas)</label>
+    </customValue>
+    <customValue>
+        <fullName>University of Florida</fullName>
+        <default>false</default>
+        <label>University of Florida</label>
+    </customValue>
+    <customValue>
+        <fullName>University of North Texas</fullName>
+        <default>false</default>
+        <label>University of North Texas</label>
+    </customValue>
+    <customValue>
+        <fullName>University of St. Thomas</fullName>
+        <default>false</default>
+        <label>University of St. Thomas</label>
+    </customValue>
+    <customValue>
+        <fullName>University of Tennessee</fullName>
+        <default>false</default>
+        <label>University of Tennessee</label>
+    </customValue>
+    <customValue>
+        <fullName>University of Texas at Arlington - TMAC</fullName>
+        <default>false</default>
+        <label>University of Texas at Arlington - TMAC</label>
+    </customValue>
+    <customValue>
+        <fullName>Western Carolina University</fullName>
+        <default>false</default>
+        <label>Western Carolina University</label>
+    </customValue>
+    <customValue>
+        <fullName>Wichita State Tech University</fullName>
+        <default>false</default>
+        <label>Wichita State Tech University</label>
+    </customValue>
+    <customValue>
+        <fullName>Winona State University</fullName>
+        <default>false</default>
+        <label>Winona State University</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Union State Community College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Southern Union State Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Southwestern Illinois College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Southwestern Illinois College</label>
+    </customValue>
+    <customValue>
+        <fullName>Greene Technology Center</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Greene Technology Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Bryan ISD Career and Technical Education Center</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bryan ISD Career and Technical Education Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Uniquely Abled Project</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Uniquely Abled Project</label>
+    </customValue>
+    <customValue>
+        <fullName>Kansas State University CAM Fall 2022</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kansas State University CAM Fall 2022</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Robert C. Byrd Institute</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Robert C. Byrd Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>Non of these are close to me.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non of these are close to me.</label>
+    </customValue>
+    <customValue>
+        <fullName>Tarrant County College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tarrant County College</label>
+    </customValue>
+    <customValue>
+        <fullName>Texas State Technical College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Texas State Technical College</label>
+    </customValue>
+    <masterLabel>Associated ACE Program</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

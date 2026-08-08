@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Ackno__c</fullName>
+    <label>Special Acknowledgements</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I understand and agree to comply with the U.S. Manufacturing plan.</fullName>
+                <default>false</default>
+                <label>I understand and agree to comply with the U.S. Manufacturing plan.</label>
+            </value>
+            <value>
+                <fullName>I understand and agree to comply with the Performance of Work in the U.S. requirement.</fullName>
+                <default>false</default>
+                <label>I understand and agree to comply with the Performance of Work in the U.S. requirement.</label>
+            </value>
+            <value>
+                <fullName>I agree to comply with U.S. Export Control Laws and Regulations.</fullName>
+                <default>false</default>
+                <label>I agree to comply with U.S. Export Control Laws and Regulations.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

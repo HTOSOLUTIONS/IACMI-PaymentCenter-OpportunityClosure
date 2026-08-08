@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canvas_Enrollment_Batch__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Batch used to create the enrollment.</description>
+    <label>Canvas Enrollment Batch</label>
+    <referenceTo>Canvas_Enrollment_Batch__c</referenceTo>
+    <relationshipLabel>Canvas Enrollments</relationshipLabel>
+    <relationshipName>Canvas_Enrollments</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

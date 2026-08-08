@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>fw1__Payment_Activity__c$fw1__Transaction_Date__c</field>
+    </columns>
+    <columns>
+        <field>fw1__Payment_Activity__c$fw1__Invoice__c.fw1__Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>fw1__Payment_Activity__c$fw1__Invoice__c</field>
+    </columns>
+    <columns>
+        <field>fw1__Payment_Activity__c$fw1__Payment__c.fw1__Status__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>fw1__Payment_Activity__c$fw1__Invoice_Paid_Amount__c</field>
+    </columns>
+    <description>November 2025 payments received for 2026 Membership</description>
+    <filter>
+        <criteriaItems>
+            <column>fw1__Payment_Activity__c$fw1__Applied_To_Invoice__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>fw1__Payment_Activity__c$fw1__Invoice__c.fw1__Billing_Period_End__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>1/1/2027</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>fw1__Payment_Activity__c$fw1__Transaction_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>3/31/2026 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>fw1__Payment_Activity__c$fw1__Invoice__c.fw1__Billing_Period_Start__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>12/31/2025</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>2026 Invoice Payments</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>fw1__Payment_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>fw1__Payment_Activity__c$fw1__Transaction_Date__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>fw1__Payment_Activity__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

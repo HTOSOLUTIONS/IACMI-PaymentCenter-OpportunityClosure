@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Full_Legal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Membership_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Organization_Size__c</field>
+    </columns>
+    <description>Active Member List</description>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Organization_Size__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Large Industry (&gt; 500 employees),Medium Industry (51-500 employees),Small/Medium Industry (11-50 employees),Small Industry (1-10 employees),Academic Partner,Academic/Workforce Partner,Community College/Workforce Partner,Academic Institution,Solo Consultant,Other Entity,Sub Large Industry (&gt; 500 employees)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Membership_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Consortium,Premium,Resource,Strategic,None</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Active Member Report (Alphabetic/Email)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the reason for termination --></help>
+    <label><!-- Reason for Termination --></label>
+    <name>Reason_for_Termination__c</name>
+    <picklistValues>
+        <masterLabel>Financial Difficulties</masterLabel>
+        <translation><!-- Financial Difficulties --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legacy contact left company/Turn over</masterLabel>
+        <translation><!-- Legacy contact left company/Turn over --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loss of funding/project</masterLabel>
+        <translation><!-- Loss of funding/project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Member Value Not Sufficient</masterLabel>
+        <translation><!-- Member Value Not Sufficient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reorganization/Buy out</masterLabel>
+        <translation><!-- Reorganization/Buy out --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown/Other</masterLabel>
+        <translation><!-- Unknown/Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

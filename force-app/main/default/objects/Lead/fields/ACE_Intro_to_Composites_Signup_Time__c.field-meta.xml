@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACE_Intro_to_Composites_Signup_Time__c</fullName>
+    <description>Introduction to Composites &amp; Composites Manufacturing signup time</description>
+    <label>ACE Intro to Composites Signup Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

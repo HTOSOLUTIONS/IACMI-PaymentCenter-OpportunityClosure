@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Advisor</fullName>
+        <default>false</default>
+        <label>Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Advisor</fullName>
+        <default>false</default>
+        <label>Non-Advisor</label>
+    </customValue>
+    <masterLabel>NAC Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

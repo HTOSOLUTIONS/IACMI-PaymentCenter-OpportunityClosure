@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Full_Legal_Name__c</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>Account.Membership_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Organization_Size__c</field>
+    </columns>
+    <description>Historical Member Report (Alphabetic)</description>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Member,Former Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Organization_Size__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Large Industry (&gt; 500 employees),Medium Industry (51-500 employees),Small/Medium Industry (11-50 employees),Small Industry (1-10 employees),Academic Partner,Community College/Workforce Partner,Resource,Other Entity,&quot;Not sure, would like to discuss&quot;,Strategic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Membership_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Consortium,Premium,Resource,Strategic</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Historical Member Report (Alphabetic)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

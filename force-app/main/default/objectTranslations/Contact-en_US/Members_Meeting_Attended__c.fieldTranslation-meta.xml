@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Members Meeting Attended --></label>
+    <name>Members_Meeting_Attended__c</name>
+    <picklistValues>
+        <masterLabel>Summer 2015</masterLabel>
+        <translation><!-- Summer 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2016</masterLabel>
+        <translation><!-- Summer 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2017</masterLabel>
+        <translation><!-- Summer 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2018</masterLabel>
+        <translation><!-- Summer 2018 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winter 2016</masterLabel>
+        <translation><!-- Winter 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winter 2017</masterLabel>
+        <translation><!-- Winter 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winter 2018</masterLabel>
+        <translation><!-- Winter 2018 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

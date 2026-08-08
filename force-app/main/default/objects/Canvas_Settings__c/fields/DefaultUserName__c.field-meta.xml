@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DefaultUserName__c</fullName>
+    <description>This is the User Name field on Canvas User record:  (Example:  CU-000006)</description>
+    <externalId>false</externalId>
+    <label>DefaultUserName</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

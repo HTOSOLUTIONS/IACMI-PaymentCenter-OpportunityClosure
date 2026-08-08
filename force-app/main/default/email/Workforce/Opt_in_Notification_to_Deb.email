@@ -1,0 +1,2 @@
+Deb,
+{!CampaignMember.FirstName} {!CampaignMember.LastName} just opted in to the {!CampaignMember.Campaign} List.

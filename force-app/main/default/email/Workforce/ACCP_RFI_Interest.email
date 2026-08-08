@@ -1,0 +1,13 @@
+We have a new General Inquiry lead to follow up on; below you will find the details. 
+
+
+Name: {!Lead.Name}
+Title: {!Lead.Title}
+Company: {!Lead.Company}
+Email: {!Lead.Email}
+Phone: {!Lead.Phone}
+
+
+Respectfully, 
+Tyler Blevins 
+Workforce & Community Development Manager

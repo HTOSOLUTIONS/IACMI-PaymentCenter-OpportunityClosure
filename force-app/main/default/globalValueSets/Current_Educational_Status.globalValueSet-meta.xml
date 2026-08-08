@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Attending High School</fullName>
+        <default>false</default>
+        <label>Attending High School</label>
+    </customValue>
+    <customValue>
+        <fullName>Attending Community College</fullName>
+        <default>false</default>
+        <label>Attending Community College</label>
+    </customValue>
+    <customValue>
+        <fullName>Attending University</fullName>
+        <default>false</default>
+        <label>Attending University</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Currently in School</fullName>
+        <default>false</default>
+        <label>Not Currently in School</label>
+    </customValue>
+    <masterLabel>Current Educational Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

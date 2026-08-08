@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Opt_in_Notification_to_Deb_for_Wind</fullName>
+        <description>Opt-in Notification to Deb for working group lists</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jjeffries@iacmi.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>info@iacmi.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workforce/Opt_in_Notification_to_Deb</template>
+    </alerts>
+</Workflow>

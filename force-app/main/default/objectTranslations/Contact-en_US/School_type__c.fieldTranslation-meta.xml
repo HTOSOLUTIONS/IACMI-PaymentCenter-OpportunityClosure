@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- School type --></label>
+    <name>School_type__c</name>
+    <picklistValues>
+        <masterLabel>Community College (two-year)</masterLabel>
+        <translation><!-- Community College (two-year) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High School</masterLabel>
+        <translation><!-- High School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not currently in school</masterLabel>
+        <translation><!-- Not currently in school --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>University (four-year)</masterLabel>
+        <translation><!-- University (four-year) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

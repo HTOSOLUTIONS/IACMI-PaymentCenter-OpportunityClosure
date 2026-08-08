@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Form_Completed_Date__c</fullName>
+    <inlineHelpText>This is the date the membership form was submitted on the website.</inlineHelpText>
+    <label>Membership Form Completed Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

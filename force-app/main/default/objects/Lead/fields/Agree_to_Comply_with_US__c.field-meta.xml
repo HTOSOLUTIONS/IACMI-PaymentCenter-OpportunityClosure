@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agree_to_Comply_with_US__c</fullName>
+    <description>Agreed to &quot; I agree to comply with U.S. Export Control Laws and Regulations. I acknowledge that the export of goods and/or technical data from the United States may require some form of export control license from the U.S. Government and the failure to obtain such export control license may result in criminal liability under the laws of the United States. Furthermore, I agree that I will not disclose information or any matter derived from information to any person (including its own employees), nor will I export any information from the United States, if such disclosure would violate the Arms Export Control Act, the International Traffic in Arms Regulation, the Export Administration Act, the Department of Commerce Export Regulations, or any other applicable law or regulation of the United States.&quot;</description>
+    <label>Agree to Comply to US Export Control Law</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

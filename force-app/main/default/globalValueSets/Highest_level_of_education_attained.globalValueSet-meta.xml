@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>High School diploma or GED equivalent</fullName>
+        <default>false</default>
+        <label>High School diploma or GED equivalent</label>
+    </customValue>
+    <customValue>
+        <fullName>Associates Degree</fullName>
+        <default>false</default>
+        <label>Associates Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Bachelor’s Degree</fullName>
+        <default>false</default>
+        <label>Bachelor’s Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>Master’s Degree</fullName>
+        <default>false</default>
+        <label>Master’s Degree</label>
+    </customValue>
+    <customValue>
+        <fullName>PhD or Post-Doc</fullName>
+        <default>false</default>
+        <label>PhD or Post-Doc</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Highest level of education attained</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
