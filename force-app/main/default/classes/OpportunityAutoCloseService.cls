@@ -1,6 +1,8 @@
 public with sharing class OpportunityAutoCloseService {
 
     private static final String LOG_PREFIX = 'OpportunityAutoClose: ';
+    private static final String CLOSED_STAGE = 'Contract';
+
 
     public class PaidInvoiceInfo {
         public Id invoiceId;
@@ -55,8 +57,8 @@ public with sharing class OpportunityAutoCloseService {
                 continue;
             }
 
-            // Because results are ordered newest first, keep the
-            // first Payment Activity found for each invoice.
+            // Results are ordered newest first, so retain only
+            // the first Payment Activity encountered for each invoice.
             if (!paidInvoiceInfoByInvoiceId.containsKey(
                 activity.fw1__Invoice__c
             )) {
@@ -90,9 +92,89 @@ public with sharing class OpportunityAutoCloseService {
             return;
         }
 
-        // Next step:
-        // find open Opportunities where
-        // AgreementInvoice__c IN :paidInvoiceInfoByInvoiceId.keySet()
-        // and set CloseDate from the corresponding paymentDate.
+        List<Opportunity> openOpportunities = [
+            SELECT Id,
+                   Name,
+                   StageName,
+                   CloseDate,
+                   AgreementInvoice__c
+            FROM Opportunity
+            WHERE AgreementInvoice__c IN :paidInvoiceInfoByInvoiceId.keySet()
+              AND IsClosed = false
+        ];
+
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Open Opportunities found: ' + openOpportunities.size()
+        );
+
+        if (openOpportunities.isEmpty()) {
+            return;
+        }
+
+        List<Opportunity> opportunitiesToClose =
+            new List<Opportunity>();
+
+        for (Opportunity opportunity : openOpportunities) {
+
+            PaidInvoiceInfo paidInvoiceInfo =
+                paidInvoiceInfoByInvoiceId.get(
+                    opportunity.AgreementInvoice__c
+                );
+
+            if (paidInvoiceInfo == null) {
+                System.debug(
+                    LoggingLevel.INFO,
+                    LOG_PREFIX +
+                    'Skipping Opportunity=' + opportunity.Id +
+                    ' because no payment information was found.'
+                );
+                continue;
+            }
+
+            System.debug(
+                LoggingLevel.INFO,
+                LOG_PREFIX +
+                'Closing Opportunity=' + opportunity.Id +
+                ', Name=' + opportunity.Name +
+                ', CurrentStage=' + opportunity.StageName +
+                ', CurrentCloseDate=' + opportunity.CloseDate +
+                ', Invoice=' + opportunity.AgreementInvoice__c +
+                ', NewStage=' + CLOSED_STAGE +
+                ', NewCloseDate=' + paidInvoiceInfo.paymentDate.date()
+            );
+
+            opportunity.StageName = CLOSED_STAGE;
+            opportunity.CloseDate =
+                paidInvoiceInfo.paymentDate.date();
+
+            opportunitiesToClose.add(opportunity);
+        }
+
+        if (opportunitiesToClose.isEmpty()) {
+            System.debug(
+                LoggingLevel.INFO,
+                LOG_PREFIX +
+                'No Opportunities require updating.'
+            );
+            return;
+        }
+
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Updating ' +
+            opportunitiesToClose.size() +
+            ' Opportunity record(s).'
+        );
+
+        update opportunitiesToClose;
+
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Opportunity updates completed successfully.'
+        );
     }
 }
