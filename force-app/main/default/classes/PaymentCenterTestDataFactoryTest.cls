@@ -61,16 +61,44 @@ private class PaymentCenterTestDataFactoryTest {
         System.assertNotEquals(null, activity.Id);
 
         Opportunity savedOpportunity = [
-            SELECT AccountId, AgreementInvoice__c, StageName
+            SELECT AccountId,
+                AgreementInvoice__c,
+                StageName,
+                CloseDate,
+                IsClosed,
+                IsWon
             FROM Opportunity
             WHERE Id = :opportunity.Id
         ];
 
-        System.assertEquals(account.Id, savedOpportunity.AccountId);
-        System.assertEquals(invoice.Id, savedOpportunity.AgreementInvoice__c);
         System.assertEquals(
-            'Awaiting Agreement',
+            account.Id,
+            savedOpportunity.AccountId
+        );
+
+        System.assertEquals(
+            invoice.Id,
+            savedOpportunity.AgreementInvoice__c
+        );
+
+        System.assertEquals(
+            'Contract',
             savedOpportunity.StageName
+        );
+
+        System.assertEquals(
+            paymentDate.date(),
+            savedOpportunity.CloseDate
+        );
+
+        System.assertEquals(
+            true,
+            savedOpportunity.IsClosed
+        );
+
+        System.assertEquals(
+            true,
+            savedOpportunity.IsWon
         );
     }
 }
