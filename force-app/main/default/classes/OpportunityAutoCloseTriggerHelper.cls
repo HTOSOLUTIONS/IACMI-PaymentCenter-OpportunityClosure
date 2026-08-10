@@ -1,25 +1,16 @@
-
 public with sharing class OpportunityAutoCloseTriggerHelper {
 
-    public static void processPayments(
-        List<fw1__Payment__c> payments,
-        Map<Id, fw1__Payment__c> oldMap
+    public static void processPaidInvoices(
+        List<fw1__Invoice__c> invoices
     ) {
-        Set<Id> paymentIds = new Set<Id>();
+        Set<Id> invoiceIds = new Set<Id>();
 
-        if (payments == null) {
-            return;
+        for (fw1__Invoice__c invoice : invoices) {
+            invoiceIds.add(invoice.Id);
         }
 
-        for (fw1__Payment__c payment : payments) {
-            if (payment.Id != null) {
-                paymentIds.add(payment.Id);
-            }
-        }
-
-        if (!paymentIds.isEmpty()) {
-            OpportunityAutoCloseService.processPayments(paymentIds);
+        if (!invoiceIds.isEmpty()) {
+            OpportunityAutoCloseService.processPaidInvoices(invoiceIds);
         }
     }
 }
-

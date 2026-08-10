@@ -1,78 +1,98 @@
-
 public with sharing class OpportunityAutoCloseService {
 
-    public class PaymentInfo {
-        public Id paymentId;
+    private static final String LOG_PREFIX = 'OpportunityAutoClose: ';
+
+    public class PaidInvoiceInfo {
         public Id invoiceId;
+        public Id paymentId;
         public Datetime paymentDate;
 
-        public PaymentInfo(
-            Id paymentId,
+        public PaidInvoiceInfo(
             Id invoiceId,
+            Id paymentId,
             Datetime paymentDate
         ) {
-            this.paymentId = paymentId;
             this.invoiceId = invoiceId;
+            this.paymentId = paymentId;
             this.paymentDate = paymentDate;
         }
     }
 
 
-    public static void processPayments(Set<Id> paymentIds) {
-        if (paymentIds == null || paymentIds.isEmpty()) {
+    public static void processPaidInvoices(Set<Id> invoiceIds) {
+        if (invoiceIds == null || invoiceIds.isEmpty()) {
+            System.debug(
+                LoggingLevel.INFO,
+                LOG_PREFIX + 'No paid invoice IDs supplied.'
+            );
             return;
         }
 
-        List<PaymentInfo> paymentInfos = new List<PaymentInfo>();
-        Set<Id> invoiceIds = new Set<Id>();
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Processing ' + invoiceIds.size() + ' paid invoice(s).'
+        );
 
-        for (fw1__Payment__c payment : [
+        Map<Id, PaidInvoiceInfo> paidInvoiceInfoByInvoiceId =
+            new Map<Id, PaidInvoiceInfo>();
+
+        for (fw1__Payment_Activity__c activity : [
             SELECT Id,
                    fw1__Invoice__c,
-                   fw1__Payment_Date__c
-            FROM fw1__Payment__c
-            WHERE Id IN :paymentIds
+                   fw1__Payment__c,
+                   fw1__Transaction_Date__c,
+                   CreatedDate
+            FROM fw1__Payment_Activity__c
+            WHERE fw1__Invoice__c IN :invoiceIds
+              AND fw1__Applied_To_Invoice__c = true
+            ORDER BY CreatedDate DESC
         ]) {
             if (
-                payment.fw1__Invoice__c != null &&
-                payment.fw1__Payment_Date__c != null
+                activity.fw1__Invoice__c == null ||
+                activity.fw1__Transaction_Date__c == null
             ) {
-                paymentInfos.add(
-                    new PaymentInfo(
-                        payment.Id,
-                        payment.fw1__Invoice__c,
-                        payment.fw1__Payment_Date__c
-                    )
+                continue;
+            }
+
+            // Because results are ordered newest first, keep the
+            // first Payment Activity found for each invoice.
+            if (!paidInvoiceInfoByInvoiceId.containsKey(
+                activity.fw1__Invoice__c
+            )) {
+                PaidInvoiceInfo info = new PaidInvoiceInfo(
+                    activity.fw1__Invoice__c,
+                    activity.fw1__Payment__c,
+                    activity.fw1__Transaction_Date__c
                 );
 
-                invoiceIds.add(payment.fw1__Invoice__c);
+                paidInvoiceInfoByInvoiceId.put(
+                    activity.fw1__Invoice__c,
+                    info
+                );
+
+                System.debug(
+                    LoggingLevel.INFO,
+                    LOG_PREFIX +
+                    'Paid Invoice=' + info.invoiceId +
+                    ', Payment=' + info.paymentId +
+                    ', PaymentDate=' + info.paymentDate
+                );
             }
         }
 
-        if (invoiceIds.isEmpty()) {
-            return;
-        }
-
-        Set<Id> paidInvoiceIds = new Set<Id>();
-
-        for (fw1__Invoice__c invoice : [
-            SELECT Id,
-                   fw1__Status_Sys__c,
-                   fw1__Total_Paid_Amount__c
-            FROM fw1__Invoice__c
-            WHERE Id IN :invoiceIds
-        ]) {
-            if (invoice.fw1__Status_Sys__c == 'Paid') {
-                paidInvoiceIds.add(invoice.Id);
-            }
-        }
-
-        if (paidInvoiceIds.isEmpty()) {
+        if (paidInvoiceInfoByInvoiceId.isEmpty()) {
+            System.debug(
+                LoggingLevel.INFO,
+                LOG_PREFIX +
+                'No applied Payment Activity records found for paid invoices.'
+            );
             return;
         }
 
         // Next step:
-        // find open Opportunities linked through AgreementInvoice__c.
+        // find open Opportunities where
+        // AgreementInvoice__c IN :paidInvoiceInfoByInvoiceId.keySet()
+        // and set CloseDate from the corresponding paymentDate.
     }
 }
-
