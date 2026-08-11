@@ -362,5 +362,146 @@ private class PaymentCenterTestDataFactoryTest {
         );
     }
 
+    @IsTest
+    static void logsWhenNoOpportunityMatchesInvoice() {
 
+        Account account =
+            PaymentCenterTestDataFactory.createAccount();
+
+        fw1__Invoice__c invoice =
+            PaymentCenterTestDataFactory.createInvoice(
+                account,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+            );
+
+        PaymentCenterTestDataFactory.createInvoiceLine(
+            invoice,
+            PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+        );
+
+        // Intentionally do NOT create an Opportunity.
+
+        Datetime paymentDate =
+            Datetime.newInstance(
+                Date.today(),
+                Time.newInstance(12, 0, 0, 0)
+            );
+
+        fw1__Payment__c payment =
+            PaymentCenterTestDataFactory.createPayment(
+                account,
+                invoice,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT,
+                paymentDate
+            );
+
+        fw1__Payment_Activity__c activity =
+            PaymentCenterTestDataFactory.createPaymentActivity(
+                payment,
+                invoice,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT,
+                paymentDate
+            );
+
+        Test.startTest();
+
+        PaymentCenterTestDataFactory.markInvoicePaid(
+            invoice,
+            PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+        );
+
+        Test.stopTest();
+
+        List<Opportunity> opportunities = [
+            SELECT Id
+            FROM Opportunity
+            WHERE AgreementInvoice__c = :invoice.Id
+        ];
+
+        System.assertEquals(
+            0,
+            opportunities.size(),
+            'There should be no Opportunity linked to the invoice.'
+        );
+
+        List<Opportunity_Auto_Close_Log__c> logs = [
+            SELECT Id,
+                Invoice__c,
+                Payment_Activity__c,
+                Payment__c,
+                Opportunity__c,
+                Payment_Date__c,
+                Outcome__c,
+                Previous_Stage__c,
+                New_Stage__c,
+                Previous_Close_Date__c,
+                New_Close_Date__c,
+                Result__c
+            FROM Opportunity_Auto_Close_Log__c
+            WHERE Invoice__c = :invoice.Id
+        ];
+
+        System.assertEquals(
+            1,
+            logs.size(),
+            'Exactly one audit log should be created.'
+        );
+
+        Opportunity_Auto_Close_Log__c log = logs[0];
+
+        System.assertEquals(
+            invoice.Id,
+            log.Invoice__c
+        );
+
+        System.assertEquals(
+            activity.Id,
+            log.Payment_Activity__c
+        );
+
+        System.assertEquals(
+            payment.Id,
+            log.Payment__c
+        );
+
+        System.assertEquals(
+            null,
+            log.Opportunity__c
+        );
+
+        System.assertEquals(
+            paymentDate,
+            log.Payment_Date__c
+        );
+
+        System.assertEquals(
+            'No Matching Opportunity',
+            log.Outcome__c
+        );
+
+        System.assertEquals(
+            null,
+            log.Previous_Stage__c
+        );
+
+        System.assertEquals(
+            null,
+            log.New_Stage__c
+        );
+
+        System.assertEquals(
+            null,
+            log.Previous_Close_Date__c
+        );
+
+        System.assertEquals(
+            null,
+            log.New_Close_Date__c
+        );
+
+        System.assertNotEquals(
+            null,
+            log.Result__c
+        );
+    }
 }
