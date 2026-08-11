@@ -26,6 +26,8 @@ private class PaymentCenterTestDataFactoryTest {
                 invoice
             );
 
+        Date originalCloseDate = opportunity.CloseDate;
+
         Datetime paymentDate =
             Datetime.newInstance(
                 Date.today(),
@@ -100,5 +102,89 @@ private class PaymentCenterTestDataFactoryTest {
             true,
             savedOpportunity.IsWon
         );
+
+
+        List<Opportunity_Auto_Close_Log__c> logs = [
+            SELECT Id,
+                Invoice__c,
+                Payment_Activity__c,
+                Payment__c,
+                Opportunity__c,
+                Payment_Date__c,
+                Outcome__c,
+                Previous_Stage__c,
+                New_Stage__c,
+                Previous_Close_Date__c,
+                New_Close_Date__c,
+                Result__c
+            FROM Opportunity_Auto_Close_Log__c
+            WHERE Opportunity__c = :savedOpportunity.Id
+        ];
+
+        System.assertEquals(
+            1,
+            logs.size(),
+            'Exactly one audit log should be created.'
+        );
+
+        Opportunity_Auto_Close_Log__c log = logs[0];
+
+        System.assertEquals(
+            invoice.Id,
+            log.Invoice__c
+        );
+
+        System.assertEquals(
+            activity.Id,
+            log.Payment_Activity__c
+        );
+
+        System.assertEquals(
+            payment.Id,
+            log.Payment__c
+        );
+
+        System.assertEquals(
+            savedOpportunity.Id,
+            log.Opportunity__c
+        );
+
+        System.assertEquals(
+            paymentDate,
+            log.Payment_Date__c
+        );
+
+        System.assertEquals(
+            'Opportunity Closed',
+            log.Outcome__c
+        );
+
+        System.assertEquals(
+            'Awaiting Agreement',
+            log.Previous_Stage__c
+        );
+
+        System.assertEquals(
+            'Contract',
+            log.New_Stage__c
+        );
+
+        System.assertEquals(
+            paymentDate.date(),
+            log.New_Close_Date__c
+        );
+
+        System.assertNotEquals(
+            null,
+            log.Result__c
+        );
+
+        System.assertEquals(
+            originalCloseDate,
+            log.Previous_Close_Date__c
+        );
+
+
+
     }
 }
