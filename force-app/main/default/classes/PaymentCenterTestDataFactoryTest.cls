@@ -504,4 +504,114 @@ private class PaymentCenterTestDataFactoryTest {
             log.Result__c
         );
     }
+
+
+    @IsTest
+    static void doesNotCloseOpportunityForPartialPayment() {
+
+        Account account =
+            PaymentCenterTestDataFactory.createAccount();
+
+        fw1__Invoice__c invoice =
+            PaymentCenterTestDataFactory.createInvoice(
+                account,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+            );
+
+        PaymentCenterTestDataFactory.createInvoiceLine(
+            invoice,
+            PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+        );
+
+        Opportunity opportunity =
+            PaymentCenterTestDataFactory.createOpportunity(
+                account,
+                invoice
+            );
+
+        Date originalCloseDate = opportunity.CloseDate;
+
+        Decimal partialAmount =
+            PaymentCenterTestDataFactory.DEFAULT_AMOUNT / 2;
+
+        Datetime paymentDate =
+            Datetime.newInstance(
+                Date.today(),
+                Time.newInstance(12, 0, 0, 0)
+            );
+
+        fw1__Payment__c payment =
+            PaymentCenterTestDataFactory.createPayment(
+                account,
+                invoice,
+                partialAmount,
+                paymentDate
+            );
+
+        PaymentCenterTestDataFactory.createPaymentActivity(
+            payment,
+            invoice,
+            partialAmount,
+            paymentDate
+        );
+
+        Test.startTest();
+
+        /*
+        * Simulate Payment Center applying only a partial payment.
+        * The Invoice must NOT transition to Paid.
+        */
+        invoice.fw1__Total_Paid_Amount__c = partialAmount;
+        update invoice;
+
+        Test.stopTest();
+
+        Opportunity savedOpportunity = [
+            SELECT StageName,
+                CloseDate,
+                IsClosed
+            FROM Opportunity
+            WHERE Id = :opportunity.Id
+        ];
+
+        System.assertEquals(
+            'Awaiting Agreement',
+            savedOpportunity.StageName,
+            'Partial payment must not close the Opportunity.'
+        );
+
+        System.assertEquals(
+            originalCloseDate,
+            savedOpportunity.CloseDate,
+            'Partial payment must not change the Close Date.'
+        );
+
+        System.assertEquals(
+            false,
+            savedOpportunity.IsClosed
+        );
+
+        List<Opportunity_Auto_Close_Log__c> logs = [
+            SELECT Id
+            FROM Opportunity_Auto_Close_Log__c
+            WHERE Invoice__c = :invoice.Id
+        ];
+
+        System.assertEquals(
+            0,
+            logs.size(),
+            'No auto-close audit record should be created because the Invoice never transitioned to Paid.'
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
