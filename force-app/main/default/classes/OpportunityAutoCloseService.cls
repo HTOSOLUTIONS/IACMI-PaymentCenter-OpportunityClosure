@@ -35,10 +35,7 @@ public with sharing class OpportunityAutoCloseService {
 
     public static void processPaidInvoices(Set<Id> invoiceIds) {
         if (invoiceIds == null || invoiceIds.isEmpty()) {
-            System.debug(
-                LoggingLevel.INFO,
-                LOG_PREFIX + 'No paid invoice IDs supplied.'
-            );
+
             return;
         }
 
@@ -92,23 +89,12 @@ public with sharing class OpportunityAutoCloseService {
                     info
                 );
 
-                System.debug(
-                    LoggingLevel.INFO,
-                    LOG_PREFIX +
-                    'Paid Invoice=' + info.invoiceId +
-                    ', PaymentActivity=' + info.paymentActivityId +
-                    ', Payment=' + info.paymentId +
-                    ', PaymentDate=' + info.paymentDate
-                );
+
             }
         }
 
         if (paidInvoiceInfoByInvoiceId.isEmpty()) {
-            System.debug(
-                LoggingLevel.INFO,
-                LOG_PREFIX +
-                'No applied Payment Activity records found for paid invoices.'
-            );
+
             return;
         }
 
@@ -128,12 +114,6 @@ public with sharing class OpportunityAutoCloseService {
                 IN :paidInvoiceInfoByInvoiceId.keySet()
         ];
 
-        System.debug(
-            LoggingLevel.INFO,
-            LOG_PREFIX +
-            'Matching Opportunities found: ' +
-            matchingOpportunities.size()
-        );
 
         Map<Id, List<Opportunity>> opportunitiesByInvoiceId =
             new Map<Id, List<Opportunity>>();
@@ -186,13 +166,6 @@ public with sharing class OpportunityAutoCloseService {
                     )
                 );
 
-                System.debug(
-                    LoggingLevel.INFO,
-                    LOG_PREFIX +
-                    'No matching Opportunity for Invoice=' +
-                    invoiceId
-                );
-
                 continue;
             }
 
@@ -225,13 +198,6 @@ public with sharing class OpportunityAutoCloseService {
                         )
                     );
 
-                    System.debug(
-                        LoggingLevel.INFO,
-                        LOG_PREFIX +
-                        'Opportunity already closed. Opportunity=' +
-                        opportunity.Id +
-                        ', Stage=' + opportunity.StageName
-                    );
 
                     continue;
                 }
@@ -276,17 +242,6 @@ public with sharing class OpportunityAutoCloseService {
                     )
                 );
 
-                System.debug(
-                    LoggingLevel.INFO,
-                    LOG_PREFIX +
-                    'Closing Opportunity=' + opportunity.Id +
-                    ', PreviousStage=' + previousStage +
-                    ', NewStage=' + CLOSED_STAGE +
-                    ', PreviousCloseDate=' +
-                    previousCloseDate +
-                    ', NewCloseDate=' +
-                    info.paymentDate.date()
-                );
             }
         }
 
@@ -294,13 +249,6 @@ public with sharing class OpportunityAutoCloseService {
          * Perform one bulk Opportunity update.
          */
         if (!opportunitiesToClose.isEmpty()) {
-            System.debug(
-                LoggingLevel.INFO,
-                LOG_PREFIX +
-                'Updating ' +
-                opportunitiesToClose.size() +
-                ' Opportunity record(s).'
-            );
 
             update opportunitiesToClose;
         }
@@ -309,13 +257,7 @@ public with sharing class OpportunityAutoCloseService {
          * Persist the audit trail.
          */
         if (!auditLogs.isEmpty()) {
-            System.debug(
-                LoggingLevel.INFO,
-                LOG_PREFIX +
-                'Creating ' +
-                auditLogs.size() +
-                ' audit log record(s).'
-            );
+
 
             insert auditLogs;
         }
