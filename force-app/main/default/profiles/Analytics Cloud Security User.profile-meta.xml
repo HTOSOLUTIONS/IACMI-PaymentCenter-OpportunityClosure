@@ -5900,7 +5900,7 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>ExpressionSet</object>
         <viewAllFields>false</viewAllFields>
-        <viewAllRecords>false</viewAllRecords>
+        <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -6551,5 +6551,9 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewSetup</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetupAuditTrail</name>
     </userPermissions>
 </Profile>

@@ -20,14 +20,12 @@
     <enableDataCloudReportingPref>true</enableDataCloudReportingPref>
     <enableEmailReportsToPortalUsers>false</enableEmailReportsToPortalUsers>
     <enableFloatingReportHeaders>true</enableFloatingReportHeaders>
-    <enableIncrementalUpsert>false</enableIncrementalUpsert>
     <enableInsights>false</enableInsights>
     <enableLightningReportBuilder>false</enableLightningReportBuilder>
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
     <enableNewChartsEngine>true</enableNewChartsEngine>
     <enableNullDimension>false</enableNullDimension>
-    <enableOrgCanSeeLivePreviews>false</enableOrgCanSeeLivePreviews>
     <enableOrgCanViewTableau>false</enableOrgCanViewTableau>
     <enableOrgCanViewThumbnailForOA>false</enableOrgCanViewThumbnailForOA>
     <enableOrgHasMobileOfflineEnabled>true</enableOrgHasMobileOfflineEnabled>
@@ -57,6 +55,7 @@
     <enableWaveIndexMVDim>true</enableWaveIndexMVDim>
     <enableWaveIndexMVDimV2>false</enableWaveIndexMVDimV2>
     <enableWaveRecordNavigation>false</enableWaveRecordNavigation>
+    <enableWaveReplication>false</enableWaveReplication>
     <enableWaveReplication>false</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>
     <enableWaveSqlCFIndexing>false</enableWaveSqlCFIndexing>
