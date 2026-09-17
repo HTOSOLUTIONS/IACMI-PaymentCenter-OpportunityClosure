@@ -606,10 +606,166 @@ private class PaymentCenterTestDataFactoryTest {
 
 
 
+    @IsTest
+    static void processPaymentClosesOpportunityForAppliedInvoice() {
+
+        Account account =
+            PaymentCenterTestDataFactory.createAccount();
+
+        fw1__Invoice__c invoice =
+            PaymentCenterTestDataFactory.createInvoice(
+                account,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+            );
+
+        fw1__Invoice_Line__c invoiceLine =
+            PaymentCenterTestDataFactory.createInvoiceLine(
+                invoice,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT
+            );
+
+        Opportunity opportunity =
+            PaymentCenterTestDataFactory.createOpportunity(
+                account,
+                invoice
+            );
+
+        Date originalCloseDate = opportunity.CloseDate;
+
+        Datetime paymentDate =
+            Datetime.newInstance(
+                Date.today(),
+                Time.newInstance(12, 0, 0, 0)
+            );
+
+        fw1__Payment__c payment =
+            PaymentCenterTestDataFactory.createPayment(
+                account,
+                invoice,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT,
+                paymentDate
+            );
+
+        fw1__Payment_Activity__c activity =
+            PaymentCenterTestDataFactory.createPaymentActivity(
+                payment,
+                invoice,
+                PaymentCenterTestDataFactory.DEFAULT_AMOUNT,
+                paymentDate
+            );
+
+        /*
+        * Do NOT call markInvoicePaid().
+        *
+        * This test verifies that processPayment() finds the
+        * Payment Activity, identifies its Invoice, and passes
+        * that Invoice to processPaidInvoices().
+        */
+
+        Test.startTest();
+
+        OpportunityAutoCloseService.processPayment(payment.Id);
+
+        Test.stopTest();
+
+        Opportunity savedOpportunity = [
+            SELECT StageName,
+                CloseDate,
+                IsClosed,
+                IsWon
+            FROM Opportunity
+            WHERE Id = :opportunity.Id
+        ];
+
+        System.assertEquals(
+            'Contract',
+            savedOpportunity.StageName
+        );
+
+        System.assertEquals(
+            paymentDate.date(),
+            savedOpportunity.CloseDate
+        );
+
+        System.assertEquals(
+            true,
+            savedOpportunity.IsClosed
+        );
+
+        System.assertEquals(
+            true,
+            savedOpportunity.IsWon
+        );
+
+        List<Opportunity_Auto_Close_Log__c> logs = [
+            SELECT Id,
+                Invoice__c,
+                Payment_Activity__c,
+                Payment__c,
+                Opportunity__c,
+                Payment_Date__c,
+                Outcome__c,
+                Previous_Stage__c,
+                New_Stage__c,
+                Previous_Close_Date__c,
+                New_Close_Date__c
+            FROM Opportunity_Auto_Close_Log__c
+            WHERE Opportunity__c = :savedOpportunity.Id
+        ];
+
+        System.assertEquals(
+            1,
+            logs.size(),
+            'Exactly one audit log should be created.'
+        );
+
+        Opportunity_Auto_Close_Log__c log = logs[0];
+
+        System.assertEquals(invoice.Id, log.Invoice__c);
+        System.assertEquals(activity.Id, log.Payment_Activity__c);
+        System.assertEquals(payment.Id, log.Payment__c);
+        System.assertEquals(opportunity.Id, log.Opportunity__c);
+        System.assertEquals(paymentDate, log.Payment_Date__c);
+
+        System.assertEquals(
+            'Opportunity Closed',
+            log.Outcome__c
+        );
+
+        System.assertEquals(
+            'Awaiting Agreement',
+            log.Previous_Stage__c
+        );
+
+        System.assertEquals(
+            'Contract',
+            log.New_Stage__c
+        );
+
+        System.assertEquals(
+            originalCloseDate,
+            log.Previous_Close_Date__c
+        );
+
+        System.assertEquals(
+            paymentDate.date(),
+            log.New_Close_Date__c
+        );
+    }
 
 
+    @IsTest
+    static void processPaymentActionRejectsNullPaymentId() {
+        try {
+            OpportunityAutoCloseAction.processPayment(null);
 
-
+            Assert.fail(
+                'Expected an exception for a null Payment ID.'
+            );
+        } catch (AuraHandledException ex) {
+            // Expected.
+        }
+    }
 
 
 

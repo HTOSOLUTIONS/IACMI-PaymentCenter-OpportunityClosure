@@ -1,0 +1,23 @@
+<template>
+    <lightning-quick-action-panel header="Process Payment">
+        <p>
+            Process this payment and close any qualifying
+            Opportunities?
+        </p>
+
+        <div slot="footer">
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Process Payment"
+                class="slds-m-left_x-small"
+                onclick={handleProcess}
+                disabled={processing}>
+            </lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

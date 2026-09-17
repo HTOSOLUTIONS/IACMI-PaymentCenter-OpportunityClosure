@@ -33,6 +33,49 @@ public with sharing class OpportunityAutoCloseService {
     }
 
 
+    public static void processPayment(Id paymentId) {
+        if (paymentId == null) {
+            return;
+        }
+
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Processing Payment ' + paymentId + '.'
+        );
+
+        Set<Id> invoiceIds = new Set<Id>();
+
+        /*
+        * Find invoices associated with Payment Activities
+        * for this Payment.
+        *
+        * processPaidInvoices() performs the authoritative
+        * qualification of the Payment Activities.
+        */
+        for (fw1__Payment_Activity__c activity : [
+            SELECT fw1__Invoice__c
+            FROM fw1__Payment_Activity__c
+            WHERE fw1__Payment__c = :paymentId
+            AND fw1__Invoice__c != null
+        ]) {
+            invoiceIds.add(activity.fw1__Invoice__c);
+        }
+
+        System.debug(
+            LoggingLevel.INFO,
+            LOG_PREFIX +
+            'Payment ' + paymentId +
+            ' identified ' + invoiceIds.size() +
+            ' invoice(s) for processing.'
+        );
+
+        if (!invoiceIds.isEmpty()) {
+            processPaidInvoices(invoiceIds);
+        }
+    }
+
+
     public static void processPaidInvoices(Set<Id> invoiceIds) {
         if (invoiceIds == null || invoiceIds.isEmpty()) {
 
