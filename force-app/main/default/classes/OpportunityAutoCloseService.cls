@@ -13,13 +13,20 @@ public with sharing class OpportunityAutoCloseService {
         'Opportunity Already Closed';
 
 
-    public class PaidInvoiceInfo {
+    private static final String OUTCOME_INVOICE_NOT_PAID =
+        'Invoice Not Paid';
+
+    private static final String RESULT_INVOICE_NOT_PAID =
+        'Opportunity was not closed because the invoice is not fully paid.';
+
+
+    public class PaymentActivityInfo {
         public Id invoiceId;
         public Id paymentActivityId;
         public Id paymentId;
         public Datetime paymentDate;
 
-        public PaidInvoiceInfo(
+        public PaymentActivityInfo(
             Id invoiceId,
             Id paymentActivityId,
             Id paymentId,
@@ -85,11 +92,23 @@ public with sharing class OpportunityAutoCloseService {
         System.debug(
             LoggingLevel.INFO,
             LOG_PREFIX +
-            'Processing ' + invoiceIds.size() + ' paid invoice(s).'
+            'Processing ' + invoiceIds.size() + ' candidate invoice(s).'
         );
 
-        Map<Id, PaidInvoiceInfo> paidInvoiceInfoByInvoiceId =
-            new Map<Id, PaidInvoiceInfo>();
+        /**
+         * Query all candidate invoices by their IDs and store them in a map
+         * for quick lookup during processing.
+         */
+        Map<Id, fw1__Invoice__c> invoicesById =
+            new Map<Id, fw1__Invoice__c>([
+                SELECT Id,
+                    fw1__Status__c
+                FROM fw1__Invoice__c
+                WHERE Id IN :invoiceIds
+            ]);
+
+        Map<Id, PaymentActivityInfo> paymentActivityInfoByInvoiceId =
+            new Map<Id, PaymentActivityInfo>();
 
         /*
          * Find the most recently created Payment Activity
@@ -117,17 +136,17 @@ public with sharing class OpportunityAutoCloseService {
              * Results are newest first, so keep only the first
              * Payment Activity encountered for each invoice.
              */
-            if (!paidInvoiceInfoByInvoiceId.containsKey(
+            if (!paymentActivityInfoByInvoiceId.containsKey(
                 activity.fw1__Invoice__c
             )) {
-                PaidInvoiceInfo info = new PaidInvoiceInfo(
+                PaymentActivityInfo info = new PaymentActivityInfo(
                     activity.fw1__Invoice__c,
                     activity.Id,
                     activity.fw1__Payment__c,
                     activity.fw1__Transaction_Date__c
                 );
 
-                paidInvoiceInfoByInvoiceId.put(
+                paymentActivityInfoByInvoiceId.put(
                     activity.fw1__Invoice__c,
                     info
                 );
@@ -136,7 +155,7 @@ public with sharing class OpportunityAutoCloseService {
             }
         }
 
-        if (paidInvoiceInfoByInvoiceId.isEmpty()) {
+        if (paymentActivityInfoByInvoiceId.isEmpty()) {
 
             return;
         }
@@ -154,7 +173,7 @@ public with sharing class OpportunityAutoCloseService {
                    AgreementInvoice__c
             FROM Opportunity
             WHERE AgreementInvoice__c
-                IN :paidInvoiceInfoByInvoiceId.keySet()
+                IN :paymentActivityInfoByInvoiceId.keySet()
         ];
 
 
@@ -185,15 +204,18 @@ public with sharing class OpportunityAutoCloseService {
         /*
          * Evaluate the outcome for every paid invoice.
          */
-        for (Id invoiceId : paidInvoiceInfoByInvoiceId.keySet()) {
-            PaidInvoiceInfo info =
-                paidInvoiceInfoByInvoiceId.get(invoiceId);
+        for (Id invoiceId : paymentActivityInfoByInvoiceId.keySet()) {
+            PaymentActivityInfo info =
+                paymentActivityInfoByInvoiceId.get(invoiceId);
 
             List<Opportunity> opportunities =
                 opportunitiesByInvoiceId.get(invoiceId);
 
+            fw1__Invoice__c invoice =
+                invoicesById.get(invoiceId);
+
             /*
-             * Paid invoice has no matching Opportunity.
+             * Candidate invoice has no matching Opportunity.
              */
             if (opportunities == null || opportunities.isEmpty()) {
                 auditLogs.add(
@@ -208,6 +230,46 @@ public with sharing class OpportunityAutoCloseService {
                             'matching the paid invoice.'
                     )
                 );
+
+                continue;
+            }
+
+
+            /*
+            * Matching Opportunity exists, but the invoice
+            * is not yet fully paid.
+            */
+            if (
+                invoice == null ||
+                invoice.fw1__Status__c != 'Paid'
+            ) {
+                String invoiceStatus =
+                    invoice == null
+                        ? 'Unavailable'
+                        : invoice.fw1__Status__c;
+
+                for (Opportunity opportunity : opportunities) {
+                    auditLogs.add(
+                        new Opportunity_Auto_Close_Log__c(
+                            Invoice__c = invoiceId,
+                            Payment_Activity__c =
+                                info.paymentActivityId,
+                            Payment__c = info.paymentId,
+                            Opportunity__c = opportunity.Id,
+                            Payment_Date__c = info.paymentDate,
+                            Outcome__c =
+                                OUTCOME_INVOICE_NOT_PAID,
+                            Previous_Stage__c =
+                                opportunity.StageName,
+                            Previous_Close_Date__c =
+                                opportunity.CloseDate,
+                            Result__c =
+                                RESULT_INVOICE_NOT_PAID +
+                                ' Invoice status: ' +
+                                invoiceStatus + '.'
+                        )
+                    );
+                }
 
                 continue;
             }
